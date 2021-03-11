@@ -1,0 +1,2479 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans,en,default">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Zhang BaiCheng's Programming Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="A journey of a thousand miles must begin with a single step">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:url" content="http://zbc.io/page/6/index.html">
+<meta property="og:site_name" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:description" content="A journey of a thousand miles must begin with a single step">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta name="twitter:description" content="A journey of a thousand miles must begin with a single step">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zbc.io/page/6/">
+
+
+
+
+
+  <title> Zhang BaiCheng's Programming Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?657a2d6ff2f408bb3176a1b2e1f63785";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zhang BaiCheng's Programming Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sharp tools make good work</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Django/django-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Django/django-error/" itemprop="url">
+                  Django报错：ImportError: No module named 'pysqlite2'
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-17T00:00:00+00:00">
+                2015-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Django/" itemprop="url" rel="index">
+                    <span itemprop="name">Django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>运行环境：Cent OS6.5，Python3.4.3，Django1.8.3  </p>
+<p>执行如下命令时报错：  </p>
+<pre><code>python manage.py runserver
+</code></pre><p>错误信息如下：  </p>
+<pre><code>Traceback (most recent call last):
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py&quot;, line 31, in &lt;module&gt;
+    from pysqlite2 import dbapi2 as Database
+ImportError: No module named &apos;pysqlite2&apos;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py&quot;, line 33, in &lt;module&gt;
+    from sqlite3 import dbapi2 as Database
+  File &quot;/usr/local/python3/lib/python3.4/sqlite3/__init__.py&quot;, line 23, in &lt;module&gt;
+    from dbapi2 import *
+ImportError: No module named &apos;dbapi2&apos;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;manage.py&quot;, line 10, in &lt;module&gt;
+    execute_from_command_line(sys.argv)
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/core/management/__init__.py&quot;, line 338, in execute_from_command_line
+    utility.execute()
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/core/management/__init__.py&quot;, line 312, in execute
+    django.setup()
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/__init__.py&quot;, line 18, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/apps/registry.py&quot;, line 108, in populate
+    app_config.import_models(all_models)
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/apps/config.py&quot;, line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File &quot;/usr/local/python3/lib/python3.4/importlib/__init__.py&quot;, line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 2254, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 2237, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 2226, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1200, in _load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1129, in _exec
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1471, in exec_module
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 321, in _call_with_frames_removed
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/contrib/auth/models.py&quot;, line 41, in &lt;module&gt;
+    class Permission(models.Model):
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/models/base.py&quot;, line 139, in __new__
+    new_class.add_to_class(&apos;_meta&apos;, Options(meta, **kwargs))
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/models/base.py&quot;, line 324, in add_to_class
+    value.contribute_to_class(cls, name)
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/models/options.py&quot;, line 250, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/__init__.py&quot;, line 36, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/utils.py&quot;, line 240, in __getitem__
+    backend = load_backend(db[&apos;ENGINE&apos;])
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/utils.py&quot;, line 111, in load_backend
+    return import_module(&apos;%s.base&apos; % backend_name)
+  File &quot;/usr/local/python3/lib/python3.4/importlib/__init__.py&quot;, line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 2254, in _gcd_import
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 2237, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 2226, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1200, in _load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1129, in _exec
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1471, in exec_module
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 321, in _call_with_frames_removed
+  File &quot;/usr/local/python3/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py&quot;, line 36, in &lt;module&gt;
+    raise ImproperlyConfigured(&quot;Error loading either pysqlite2 or sqlite3 modules (tried in that order): %s&quot; % exc)
+django.core.exceptions.ImproperlyConfigured: Error loading either pysqlite2 or sqlite3 modules (tried in that order): No module named &apos;dbapi2&apos;
+</code></pre><p>解决：<br>1.安装sqlite-devel  </p>
+<pre><code>yum install sqlite-devel
+</code></pre><p>此时又出现错误信息：  </p>
+<pre><code>  File &quot;/usr/bin/yum&quot;, line 30
+    except KeyboardInterrupt, e:
+                            ^
+SyntaxError: invalid syntax
+</code></pre><p>由于python3和python2语法规则不同导致，修改/usr/bin/yum第一行：  </p>
+<pre><code>#!/usr/bin/python_old
+</code></pre><p>然后就可以安装sqlite-devel了。  </p>
+<p>2.重新编译安装python：  </p>
+<pre><code>./configure --prefix=/usr/local/python-3.4.3
+make
+make install
+</code></pre><p>再次运行django，问题解决。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Django/django-unable-access/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Django/django-unable-access/" itemprop="url">
+                  启动Django之后，外部无法访问
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-17T00:00:00+00:00">
+                2015-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Django/" itemprop="url" rel="index">
+                    <span itemprop="name">Django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h4><p>默认情况只允许本机IP访问。  </p>
+<h4 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h4><p>运行如下命令来启动Django，即可接收所有IP访问：  </p>
+<pre><code>python manage.py runserver 0.0.0.0:8000
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Linux/linux-add-user/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Linux/linux-add-user/" itemprop="url">
+                  Linux添加用户
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-14T00:00:00+00:00">
+                2015-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>添加用户：  </p>
+<pre><code>useradd username
+</code></pre><p>为用户设置密码：  </p>
+<pre><code>passwd username
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Java/linux-jdk-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Java/linux-jdk-install/" itemprop="url">
+                  Linux安装JDK
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-14T00:00:00+00:00">
+                2015-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>JDK下载地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads</a>  </p>
+<p>安装：  </p>
+<pre><code>rpm -ivh jdk-8u51-linux-x64.rpm
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Tomcat/linux-tomcat-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Tomcat/linux-tomcat-error/" itemprop="url">
+                  Linux启动Tomcat报错：The file is absent or does not have execute permission
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-14T00:00:00+00:00">
+                2015-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Tomcat/" itemprop="url" rel="index">
+                    <span itemprop="name">Tomcat</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>错误信息如下：  </p>
+<pre><code>Cannot find ./catalina.sh
+The file is absent or does not have execute permission
+This file is needed to run this program
+</code></pre><p>原因：  </p>
+<pre><code>没有权限  
+</code></pre><p>解决：</p>
+<pre><code>chmod 777 *.sh
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/MySQL/linux-mysql-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/MySQL/linux-mysql-install/" itemprop="url">
+                  Linux下安装mysql
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-11T00:00:00+00:00">
+                2015-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="linux安装mysql服务分两种安装方法："><a href="#linux安装mysql服务分两种安装方法：" class="headerlink" title="linux安装mysql服务分两种安装方法："></a>linux安装mysql服务分两种安装方法：</h4><ol>
+<li>源码安装，优点是安装包比较小，只有十多M，缺点是安装依赖的库多，安装编译时间长，安装步骤复杂容易出错；  </li>
+<li>使用官方编译好的二进制文件安装，优点是安装速度快，安装步骤简单，缺点是安装包很大，300M左右。以下介绍linux使用官方编译好的二进制包安装mysql。  </li>
+</ol>
+<p>MySQL mirrors地址：<a href="http://dev.mysql.com/downloads/mirrors.html" target="_blank" rel="noopener">http://dev.mysql.com/downloads/mirrors.html</a>  </p>
+<h3 id="一、准备工作："><a href="#一、准备工作：" class="headerlink" title="一、准备工作："></a>一、准备工作：</h3><p>下载官方编译好的二进制包并解压：  </p>
+<pre><code>wget ftp://ftp.jaist.ac.jp/pub/mysql/Downloads/MySQL-5.6/mysql-5.6.30-linux-glibc2.5-x86_64.tar.gz
+tar -zxvf mysql-5.6.30-linux-glibc2.5-x86_64.tar.gz
+</code></pre><p>复制解压后的mysql目录到系统的本地软件目录：  </p>
+<pre><code>cp mysql-5.6.30-linux-glibc2.5-x86_64 /usr/local/mysql -r
+</code></pre><p>注意：此处建议用如下方法，使用软链过去，不要直接包文件复制，便于系统安装多个版本的mysql：  </p>
+<pre><code>cp mysql-5.6.30-linux-glibc2.5-x86_64 /usr/local/
+ln -s mysql-5.6.30-linux-glibc2.5-x86_64 mysql
+</code></pre><h3 id="二、用户和组："><a href="#二、用户和组：" class="headerlink" title="二、用户和组："></a>二、用户和组：</h3><p>添加系统mysql组和mysql用户：  </p>
+<pre><code>groupadd mysql
+useradd -r -g mysql mysql
+</code></pre><p>进入安装mysql软件目录：  </p>
+<pre><code>cd /usr/local/mysql
+</code></pre><p>修改当前目录所属的组mysql和用户mysql：  </p>
+<pre><code>chgrp -R mysql .
+chown -R mysql:mysql .
+</code></pre><h3 id="三、开始安装："><a href="#三、开始安装：" class="headerlink" title="三、开始安装："></a>三、开始安装：</h3><p>安装数据库：</p>
+<pre><code>scripts/mysql_install_db --user=mysql
+</code></pre><p>将mysql/目录下除了data/目录的所有文件，改回root用户所有，mysql用户只需作为mysql/data/目录下所有文件的所有者：</p>
+<pre><code>chown -R root .
+chown -R mysql data
+</code></pre><h3 id="四、开机启动："><a href="#四、开机启动：" class="headerlink" title="四、开机启动："></a>四、开机启动：</h3><p>复制mysql配置文件：</p>
+<pre><code>cp support-files/my-medium.cnf /etc/my.cnf
+</code></pre><p>首先需要将scripts/mysql.server服务脚本复制到/etc/init.d/，并重命名为mysqld：  </p>
+<pre><code>cp support-files/mysql.server /etc/init.d/mysqld
+</code></pre><p>通过chkconfig命令将mysql服务加入到自启动服务项中，注意服务名称mysql就是我们将mysql.server复制到/etc/init.d/时重命名的名称：  </p>
+<pre><code>chkconfig --add mysqld
+</code></pre><p>查看是否添加成功：  </p>
+<pre><code>chkconfig --list mysqld
+</code></pre><p>重启系统，mysqld就会自动启动了。检查是否启动：  </p>
+<pre><code>netstat -anp|grep mysqld
+</code></pre><p>显示如下：  </p>
+<pre><code>tcp        0      0 0.0.0.0:3306                0.0.0.0:*                   LISTEN      27628/mysqld
+unix  2      [ ACC ]     STREAM     LISTENING     204207 27628/mysqld        /tmp/mysql.sock
+</code></pre><p>如果不想重新启动系统，那就手动启动MySQL服务：  </p>
+<pre><code>service mysqld start
+</code></pre><h3 id="五、其他配置："><a href="#五、其他配置：" class="headerlink" title="五、其他配置："></a>五、其他配置：</h3><p>将/usr/local/mysql/bin/mysql加入环境变量中，在/etc/profile最后加入两行命令：</p>
+<pre><code>MYSQL_HOME=/usr/local/mysql
+export PATH=$PATH:$MYSQL_HOME/bin
+</code></pre><p>修改mysql的root用户密码，root初始密码为空的：</p>
+<pre><code>/usr/local/mysql/bin/mysqladmin -u root password &apos;密码&apos;
+</code></pre><h3 id="附录A："><a href="#附录A：" class="headerlink" title="附录A："></a>附录A：</h3><p>MySQL 5.6官方提供的安装步骤：  </p>
+<pre><code># Preconfiguration setup
+shell&gt; groupadd mysql
+shell&gt; useradd -r -g mysql -s /bin/false mysql
+# Beginning of source-build specific instructions
+shell&gt; tar zxvf mysql-VERSION.tar.gz
+shell&gt; cd mysql-VERSION
+shell&gt; cmake .
+shell&gt; make
+shell&gt; make install
+# End of source-build specific instructions
+# Postinstallation setup
+shell&gt; cd /usr/local/mysql
+shell&gt; chown -R mysql .
+shell&gt; chgrp -R mysql .
+shell&gt; scripts/mysql_install_db --user=mysql
+shell&gt; chown -R root .
+shell&gt; chown -R mysql data
+shell&gt; bin/mysqld_safe --user=mysql &amp;
+# Next command is optional
+shell&gt; cp support-files/mysql.server /etc/init.d/mysql.server
+</code></pre><h3 id="附录B："><a href="#附录B：" class="headerlink" title="附录B："></a>附录B：</h3><p>MySQL 5.7后安装步骤稍有不同，不过都差不太多，以下是官方提供的安装步骤：  </p>
+<pre><code># Preconfiguration setup
+shell&gt; groupadd mysql
+shell&gt; useradd -r -g mysql -s /bin/false mysql
+# Beginning of source-build specific instructions
+shell&gt; tar zxvf mysql-VERSION.tar.gz
+shell&gt; cd mysql-VERSION
+shell&gt; cmake .
+shell&gt; make
+shell&gt; make install
+# End of source-build specific instructions
+# Postinstallation setup
+shell&gt; cd /usr/local/mysql
+shell&gt; chown -R mysql .
+shell&gt; chgrp -R mysql .
+shell&gt; bin/mysql_install_db --user=mysql    # Before MySQL 5.7.6
+shell&gt; bin/mysqld --initialize --user=mysql # MySQL 5.7.6 and up
+shell&gt; bin/mysql_ssl_rsa_setup              # MySQL 5.7.6 and up
+shell&gt; chown -R root .
+shell&gt; chown -R mysql data
+shell&gt; bin/mysqld_safe --user=mysql &amp;
+# Next command is optional
+shell&gt; cp support-files/mysql.server /etc/init.d/mysql.server
+</code></pre><h3 id="六、参考链接："><a href="#六、参考链接：" class="headerlink" title="六、参考链接："></a>六、参考链接：</h3><p><a href="http://jingyan.baidu.com/article/a378c9609eb652b3282830fd.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/a378c9609eb652b3282830fd.html</a><br><a href="http://blog.csdn.net/wendi_0506/article/details/39478369" target="_blank" rel="noopener">http://blog.csdn.net/wendi_0506/article/details/39478369</a><br><a href="http://blog.csdn.net/superchanon/article/details/8546254" target="_blank" rel="noopener">http://blog.csdn.net/superchanon/article/details/8546254</a><br><a href="http://dev.mysql.com/doc/refman/5.7/en/installing-source-distribution.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.7/en/installing-source-distribution.html</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Linux/linux-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Linux/linux-command/" itemprop="url">
+                  Linux命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-10T00:00:00+00:00">
+                2015-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>查看进程：  </p>
+<pre><code>ps -ef|grep process
+</code></pre><p>修改目录拥有者：  </p>
+<pre><code>chown -R groupname:username filename
+</code></pre><p>修改当前目录拥有者：  </p>
+<pre><code>chown -R groupname:username ./
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/其他/Health/cervicales-gym/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/其他/Health/cervicales-gym/" itemprop="url">
+                  颈椎病自我运动治疗
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-08T00:00:00+00:00">
+                2015-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其他/Health/" itemprop="url" rel="index">
+                    <span itemprop="name">Health</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>每日可自行施术一次。手法由轻渐重，以能忍耐为度。依法施术，一般1-2月即可见效。  </p>
+<h4 id="1、颈部运动："><a href="#1、颈部运动：" class="headerlink" title="1、颈部运动："></a>1、颈部运动：</h4><pre><code>头向前倾十次，向后仰十次，向左倾十次，向右倾十次。然后缓慢摇头，左转十次，右转十次。
+</code></pre><h4 id="2、摇动上肢："><a href="#2、摇动上肢：" class="headerlink" title="2、摇动上肢："></a>2、摇动上肢：</h4><pre><code>左臂摇动二十次，再右臂摇动二十次。
+</code></pre><h4 id="3、抓空练指："><a href="#3、抓空练指：" class="headerlink" title="3、抓空练指："></a>3、抓空练指：</h4><pre><code>两臂平伸，双手五指作屈伸运动，可作五十次。
+</code></pre><h4 id="4、局部按摩："><a href="#4、局部按摩：" class="headerlink" title="4、局部按摩："></a>4、局部按摩：</h4><pre><code>可于颈部、大椎穴、风池穴附近寻找压痛点、硬结点或肌肉绷紧处，在这些反应点上进行揉按、推掐。
+</code></pre><h4 id="5、远道点穴："><a href="#5、远道点穴：" class="headerlink" title="5、远道点穴："></a>5、远道点穴：</h4><pre><code>在手背、足背、小臀前外侧、小腿外侧寻找压痛点。于此反应点施点穴按摩。
+</code></pre><h4 id="6、擦掌摩腰："><a href="#6、擦掌摩腰：" class="headerlink" title="6、擦掌摩腰："></a>6、擦掌摩腰：</h4><pre><code>将两手掌合并擦热，随即双手磨擦腰部，可上下方向擦动，作五十次。
+</code></pre><h4 id="7、掐捏踝筋："><a href="#7、掐捏踝筋：" class="headerlink" title="7、掐捏踝筋："></a>7、掐捏踝筋：</h4><pre><code>两手变替掐捏足踝后大筋。
+</code></pre><h4 id="8、用拇、食指掐揉人中穴。"><a href="#8、用拇、食指掐揉人中穴。" class="headerlink" title="8、用拇、食指掐揉人中穴。"></a>8、用拇、食指掐揉人中穴。</h4><h4 id="9、提揉两耳："><a href="#9、提揉两耳：" class="headerlink" title="9、提揉两耳："></a>9、提揉两耳：</h4><pre><code>用手提拉双耳，然后搓揉，待耳发热为止。
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Python/linux-python-pip-easy_install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Python/linux-python-pip-easy_install/" itemprop="url">
+                  Linux中Python3.4.3下pip和easy_install不好使
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-07T00:00:00+00:00">
+                2015-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>之前在网上有看到一个修改环境变量的方法，尝试了一下，没有成功，于是便总结了如下方法：  </p>
+<h3 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h3><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><p>由于pip是针对python2使用的，因此在Python3里面需要使用pip3。  </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/cn/技术/Python/linux-python-pip-easy_install/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Python/linux-python-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Python/linux-python-install/" itemprop="url">
+                  Linux下Python安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-06T00:00:00+00:00">
+                2015-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Linux下一般都有预装Python，但是版本都较低，有时需要安装相对较高的版本。  </p>
+<h3 id="一、下载："><a href="#一、下载：" class="headerlink" title="一、下载："></a>一、下载：</h3><p>首先，需要到官网下载所需要的Python版本：<a href="https://www.python.org/downloads" target="_blank" rel="noopener">https://www.python.org/downloads</a><br>也可以执行如下命令直接下载，这里以Python-3.4.3.tgz为例：  </p>
+<pre><code>wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz
+</code></pre><h3 id="二、解压："><a href="#二、解压：" class="headerlink" title="二、解压："></a>二、解压：</h3><p>注意：由于是.tgz后缀的文件，参数选择是-xzvf，若是其他格式的压缩文件，参数会有不同。  </p>
+<pre><code>tar -xzvf Python-3.4.3.tgz
+</code></pre><h3 id="三、编译："><a href="#三、编译：" class="headerlink" title="三、编译："></a>三、编译：</h3><p>  在编译前先在/usr/local建一个文件夹python-3.4.3（作为python的安装路径，以免覆盖老的版本）：  </p>
+<pre><code>mkdir /usr/local/python-3.4.3
+</code></pre><p>  进入到 Python-3.4.3 目录，执行如下命令生成Makefile文件，Makefile主要是被下一步的 make 命令所使用，并使用 –prefix 命令来制定安装路径：  </p>
+<pre><code>./configure --prefix=/usr/local/python-3.4.3
+</code></pre><p>  执行 make 进行编译，生成执行文件：  </p>
+<pre><code>make
+</code></pre><h3 id="四、安装："><a href="#四、安装：" class="headerlink" title="四、安装："></a>四、安装：</h3><pre><code>make install
+</code></pre><p>  将原来/usr/bin/python链接改为别的名字：  </p>
+<pre><code>mv /usr/bin/python /usr/bin/python_old
+</code></pre><p>  再建立新版本python的链接：  </p>
+<pre><code>ln -s /usr/local/python-3.4.3/bin/python3 /usr/bin/python
+</code></pre><h3 id="五、完成："><a href="#五、完成：" class="headerlink" title="五、完成："></a>五、完成：</h3><p>输入python，可以看见当前python的版本信息。  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="百成">
+          <p class="site-author-name" itemprop="name">百成</p>
+           
+              <p class="site-description motion-element" itemprop="description">A journey of a thousand miles must begin with a single step</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zbc0512" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/727750999" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">百成</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1017 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans,en,default">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Struts2,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Zhang BaiCheng's Programming Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="以下是学习Struts2时遇到的一些问题，这里统一做一个总结，供后续参考。   1. 如何在eclipse中查看源码在Package Explorer中右键jar文件 &amp;gt; Properties &amp;gt; Java Source Attachment &amp;gt; External location &amp;gt; External Folder选中struts-2.3.28/src/core/src/">
+<meta name="keywords" content="Struts2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Struts2的一些问题总结">
+<meta property="og:url" content="http://zbc.io/cn/技术/Struts2/struts2/index.html">
+<meta property="og:site_name" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:description" content="以下是学习Struts2时遇到的一些问题，这里统一做一个总结，供后续参考。   1. 如何在eclipse中查看源码在Package Explorer中右键jar文件 &amp;gt; Properties &amp;gt; Java Source Attachment &amp;gt; External location &amp;gt; External Folder选中struts-2.3.28/src/core/src/">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-11T15:41:21.382Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Struts2的一些问题总结">
+<meta name="twitter:description" content="以下是学习Struts2时遇到的一些问题，这里统一做一个总结，供后续参考。   1. 如何在eclipse中查看源码在Package Explorer中右键jar文件 &amp;gt; Properties &amp;gt; Java Source Attachment &amp;gt; External location &amp;gt; External Folder选中struts-2.3.28/src/core/src/">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zbc.io/cn/技术/Struts2/struts2/">
+
+
+
+
+
+  <title> Struts2的一些问题总结 | Zhang BaiCheng's Programming Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?657a2d6ff2f408bb3176a1b2e1f63785";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zhang BaiCheng's Programming Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sharp tools make good work</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Struts2/struts2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Struts2的一些问题总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-12T00:00:00+00:00">
+                2016-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Struts2/" itemprop="url" rel="index">
+                    <span itemprop="name">Struts2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>以下是学习Struts2时遇到的一些问题，这里统一做一个总结，供后续参考。  </p>
+<h4 id="1-如何在eclipse中查看源码"><a href="#1-如何在eclipse中查看源码" class="headerlink" title="1. 如何在eclipse中查看源码"></a><font color="#F00">1. 如何在eclipse中查看源码</font></h4><p>在Package Explorer中右键jar文件 &gt; Properties &gt; Java Source Attachment &gt; External location &gt; External Folder<br>选中struts-2.3.28/src/core/src/main/java文件夹，OK。</p>
+<h4 id="2-如何在eclipse中查看Javadoc文档"><a href="#2-如何在eclipse中查看Javadoc文档" class="headerlink" title="2. 如何在eclipse中查看Javadoc文档"></a><font color="#F00">2. 如何在eclipse中查看Javadoc文档</font></h4><p>在Package Explorer中右键jar文件 &gt; Properties &gt; Javadoc location &gt; Javadoc URL &gt; Browse<br>选中struts-2.3.28/docs/struts2-core-apidocs文件夹，OK。<br>在Java文件中，选中某一个类的名字时，按F1，即可查看Javadoc文档。  </p>
+<h4 id="3-在struts-xml文件中，“-lt-”后面按“Alt-”时，不能自动提示"><a href="#3-在struts-xml文件中，“-lt-”后面按“Alt-”时，不能自动提示" class="headerlink" title="3. 在struts.xml文件中，“&lt;”后面按“Alt+/”时，不能自动提示"></a><font color="#F00">3. 在struts.xml文件中，“&lt;”后面按“Alt+/”时，不能自动提示</font></h4><p>可能是由于xml文件头部的dtd文件没有加载（因为dtd文件是个网络地址）  </p>
+<p>解决：Window &gt; Preferences &gt; XML &gt; XML Catalog &gt; ADD<br>在Location中选中一个本地的dtd文件，Key type选择URI，Key中填上xml文件头部的dtd地址，OK。  </p>
+<h4 id="4-DMI-动态方法调用"><a href="#4-DMI-动态方法调用" class="headerlink" title="4. DMI_动态方法调用"></a><font color="#F00">4. DMI_动态方法调用</font></h4><p>访问action时，可以用[action]![method]的方式来指定要访问哪个action的哪个方法。  </p>
+<p>struts.xml配置为如下才可使用：  </p>
+<pre><code>&lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot; /&gt;
+</code></pre><p>注：不推荐用此种方式，建议用通配符</p>
+<h4 id="5-通配符方式实现动态方法调用"><a href="#5-通配符方式实现动态方法调用" class="headerlink" title="5. 通配符方式实现动态方法调用"></a><font color="#F00">5. 通配符方式实现动态方法调用</font></h4><p>使用*来匹配字符串，示例如下：  </p>
+<pre><code>&lt;action name=&quot;*&quot; class=&quot;io.zbc.struts2.HelloAction&quot; method=&quot;{1}&quot;&gt;
+    &lt;result name=&quot;success&quot;&gt;/{1}.jsp&lt;/result&gt;
+&lt;/action&gt;
+</code></pre><p>其中{1}是指匹配第一个<em>，如果有多个</em>，则可以分别用{1}{2}{3}…来匹配对应位置的*。  </p>
+<p>使用这种方式，可以约定一些方法或jsp的命名，来实现配置的精简。  </p>
+<h4 id="6-Action接收参数"><a href="#6-Action接收参数" class="headerlink" title="6. Action接收参数"></a><font color="#F00">6. Action接收参数</font></h4><p>(1). 直接用属性接收<br>(2). 用DomainModel接收参数，即URL中以[对象].[属性]的方式传参<br>(3). ModelDriven，实现ModelDriven&lt;&gt;接口</p>
+<h4 id="7-设置默认action"><a href="#7-设置默认action" class="headerlink" title="7. 设置默认action"></a><font color="#F00">7. 设置默认action</font></h4><p>例如可以用来实现常见的404页面：  </p>
+<pre><code>&lt;default-action-ref name=&quot;404&quot;&gt;&lt;/default-action-ref&gt;
+&lt;action name=&quot;404&quot; class=&quot;com.opensymphony.xwork2.ActionSupport&quot;&gt;
+  &lt;result name=&quot;success&quot;&gt;/404.jsp&lt;/result&gt;
+&lt;/action&gt;
+</code></pre><h4 id="8-result-type"><a href="#8-result-type" class="headerlink" title="8. result type"></a><font color="#F00">8. result type</font></h4><h5 id="常用："><a href="#常用：" class="headerlink" title="常用："></a>常用：</h5><p>dispatcher: 服务器端跳转，用来转向页面，通常处理JSP，默认的result type。<br>redirect: 客户端跳转，重定向到一个URL，被跳转的页面中丢失传递的信息，如request。<br>chain: 服务器端跳转，用来转向action，被跳转的action中仍能获取上个页面的值，如request信息。<br>redirectAction: 客户端跳转，重定向到一个action，被跳转的页面中丢失传递的信息，如request。  </p>
+<pre><code>// 跳转到指定namespace下的action
+&lt;result type=&quot;chain&quot;&gt;
+    &lt;param name=&quot;actionName&quot;&gt;dashboard&lt;/param&gt;
+    &lt;param name=&quot;namespace&quot;&gt;/secure&lt;/param&gt;
+&lt;/result&gt;
+</code></pre><h5 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h5><p>freemaker: 处理FreeMarker模板。<br>velocity: 处理Velocity模板。<br>xslt: 处理XML/XLST模板。<br>stream: 向浏览器发送InputSream对象，通常用来处理文件下载，还可用于返回AJAX数据。<br>plainText: 显示原始文件内容，例如文件源代码。<br>httpheader: 控制特殊HTTP行为的结果类型。  </p>
+<h4 id="9-global-results"><a href="#9-global-results" class="headerlink" title="9. global-results"></a><font color="#F00">9. global-results</font></h4><pre><code>&lt;global-results&gt;
+    &lt;result name=&quot;error&quot;&gt;/error.jsp&lt;/result&gt;
+&lt;/global-results&gt;
+</code></pre><p>同包下可以共享，如果其他包下的action也想共享此result，可以继承(extends)这个namespace，例如：  </p>
+<pre><code>&lt;package name=&quot;default&quot; namespace=&quot;/&quot; extends=&quot;struts-default&quot;&gt;
+    &lt;global-results&gt;
+        &lt;result name=&quot;error&quot;&gt;/error.jsp&lt;/result&gt;
+    &lt;/global-results&gt;
+&lt;/package&gt;
+&lt;package name=&quot;test&quot; namespace=&quot;/test&quot; extends=&quot;default&quot;&gt;
+    // 此处即可默认使用上面配置的global-results了
+&lt;/package&gt;
+</code></pre><h4 id="10-OGNL表达式"><a href="#10-OGNL表达式" class="headerlink" title="10. OGNL表达式"></a><font color="#F00">10. OGNL表达式</font></h4><p>注：  </p>
+<ol>
+<li>可以用<code>&lt;s:debug&gt;&lt;/s:debug&gt;</code>标签来查看当前页面的栈值信息。  </li>
+<li>只有传递了[对象].[属性]参数，才会构造相应的对象。  </li>
+</ol>
+<p>访问普通方法或属性：直接用[对象].[方法/属性]即可。  </p>
+<p>访问静态方法或属性：用@[类名]@[方法/属性]访问。  </p>
+<p>注：访问Math类的静态方法：用@@[方法]访问。  </p>
+<p>访问普通类的构造方法：new [构造方法]。  </p>
+<p>访问List，Map，Set：直接用变量名访问。  </p>
+<p>访问List中某个元素：[对象][下标]。例如：list[1]。  </p>
+<p>访问Map中某个元素：[对象].[keys]。例如：map.key。  </p>
+<p>访问Set中某个元素：[对象][下标]。例如：set[1]。  </p>
+<p>访问容器的大小：[对象].size()或[对象].size。  </p>
+<p>投影(过滤)：[对象].{?#this.age==1}[下标]。例如：  </p>
+<pre><code>&lt;s:property value=&quot;users.{?#this.age==1}[0]&quot;/&gt;
+&lt;s:property value=&quot;users.{^#this.age&gt;1}.{age}&quot;/&gt;
+&lt;s:property value=&quot;users.{$#this.age&gt;1}.{age}&quot;/&gt;
+</code></pre><p>注：?#表示取符合过滤条件的集合，^#表示取集合的开头,$#表示取集合的结尾</p>
+<p>访问栈中的action：用“[下标]”访问从下标开始，到栈底的action，例如[0]表示栈顶开始，到栈底的action。  </p>
+<p>注：若要访问action中的某个属性，会从[下标]开始检索这个属性，直到检索到栈底。  </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Struts2/" rel="tag"># Struts2</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cn/技术/Eclipse/eclipse-tomcat-add-and-remove/" rel="next" title="Maven项目在Eclipse中，Tomcat的Add And Remove找不到项目">
+                <i class="fa fa-chevron-left"></i> Maven项目在Eclipse中，Tomcat的Add And Remove找不到项目
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cn/技术/Hibernate/hibernate3/" rel="prev" title="Hibernate3的一些问题总结">
+                Hibernate3的一些问题总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <span class="jiathis_txt">分享到：</span>
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_twitter"></a>
+  <a class="jiathis_button_fb"></a>
+  <a class="jiathis_button_googleplus"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share?uid=2054299" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+  var jiathis_config={
+    data_track_clickback:true,
+    summary:"",
+    shortUrl:false,
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2054299" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="百成">
+          <p class="site-author-name" itemprop="name">百成</p>
+           
+              <p class="site-description motion-element" itemprop="description">A journey of a thousand miles must begin with a single step</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zbc0512" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/727750999" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如何在eclipse中查看源码"><span class="nav-number">1.</span> <span class="nav-text">1. 如何在eclipse中查看源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-如何在eclipse中查看Javadoc文档"><span class="nav-number">2.</span> <span class="nav-text">2. 如何在eclipse中查看Javadoc文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-在struts-xml文件中，“-lt-”后面按“Alt-”时，不能自动提示"><span class="nav-number">3.</span> <span class="nav-text">3. 在struts.xml文件中，“&lt;”后面按“Alt+/”时，不能自动提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-DMI-动态方法调用"><span class="nav-number">4.</span> <span class="nav-text">4. DMI_动态方法调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-通配符方式实现动态方法调用"><span class="nav-number">5.</span> <span class="nav-text">5. 通配符方式实现动态方法调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Action接收参数"><span class="nav-number">6.</span> <span class="nav-text">6. Action接收参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-设置默认action"><span class="nav-number">7.</span> <span class="nav-text">7. 设置默认action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-result-type"><span class="nav-number">8.</span> <span class="nav-text">8. result type</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常用："><span class="nav-number">8.1.</span> <span class="nav-text">常用：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他："><span class="nav-number">8.2.</span> <span class="nav-text">其他：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-global-results"><span class="nav-number">9.</span> <span class="nav-text">9. global-results</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-OGNL表达式"><span class="nav-number">10.</span> <span class="nav-text">10. OGNL表达式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">百成</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

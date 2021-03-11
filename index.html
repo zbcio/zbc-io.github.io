@@ -1,0 +1,2662 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans,en,default">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Zhang BaiCheng's Programming Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="A journey of a thousand miles must begin with a single step">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:url" content="http://zbc.io/index.html">
+<meta property="og:site_name" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:description" content="A journey of a thousand miles must begin with a single step">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta name="twitter:description" content="A journey of a thousand miles must begin with a single step">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zbc.io/">
+
+
+
+
+
+  <title> Zhang BaiCheng's Programming Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?657a2d6ff2f408bb3176a1b2e1f63785";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zhang BaiCheng's Programming Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sharp tools make good work</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/postgresql/postgresql-install-question/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/postgresql/postgresql-install-question/" itemprop="url">
+                  安装PostgreSQL遇到的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-01T00:00:00+00:00">
+                2020-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/postgresql/" itemprop="url" rel="index">
+                    <span itemprop="name">postgresql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装完成后提示如下信息"><a href="#安装完成后提示如下信息" class="headerlink" title="安装完成后提示如下信息"></a>安装完成后提示如下信息</h1><pre><code>Problem running post-install step. Installation may not complete correctly The database cluster initialisation failed.
+</code></pre><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>由于所制定的data目录没有写入权限。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>可在安装之后参考如下步骤进行数据库初始化：</p>
+<ol>
+<li><p>修改data目录权限</p>
+<p> 此处省略。</p>
+</li>
+<li><p>初始化数据库，可使用initdb –help查看详细参数设置：</p>
+<p> initdb -U postgres -W -D “C:\Program Files\PostgreSQL\10\data”</p>
+</li>
+<li><p>启动pg</p>
+<p> pg_ctl -D “C:\Program Files\PostgreSQL\10\data” -l logfile start</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/jvm/stackoverflowerror-and-outofmemoryerror/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/jvm/stackoverflowerror-and-outofmemoryerror/" itemprop="url">
+                  JVM运行时异常StackOverflowError和OutOfMemoryError
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-01T00:00:00+00:00">
+                2020-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jvm/" itemprop="url" rel="index">
+                    <span itemprop="name">jvm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="StackOverflowError"><a href="#StackOverflowError" class="headerlink" title="StackOverflowError"></a>StackOverflowError</h1><ol>
+<li>线程请求的栈容量超过了JVM栈允许的最大容量。</li>
+<li>线程请求的栈容量超过本地方法栈允许的最大容量。</li>
+</ol>
+<h1 id="OutOfMemoryError"><a href="#OutOfMemoryError" class="headerlink" title="OutOfMemoryError"></a>OutOfMemoryError</h1><ol>
+<li>JVM栈可以动态扩展，并且扩展的动作已经尝试过，但是目前无法申请到足够的内存去完成扩展，或者在建立新的线程时没有足够的内存去创建对应的JVM栈。</li>
+<li>实际所需的堆超过了自动内存管理系统（GC）能提供的最大容量。</li>
+<li>方法区的内存空间不能满足内存分配请求。</li>
+<li>当创建类或接口的时候，构造运行时常量池所需要的内存空间超过了方法区所能提供的最大值。</li>
+<li>本地方法栈可以动态扩展，并且扩展的动作已经尝试过，但是目前无法申请到足够的内存去完成扩展，或者在建立新的线程时没有足够的内存去创建对应的本地方法栈。</li>
+</ol>
+<p>备注：摘自《Java虚拟机规范》。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Spring-Batch/spring-batch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Spring-Batch/spring-batch/" itemprop="url">
+                  Spring Batch学习汇总
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T00:00:00+00:00">
+                2019-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Spring-Batch/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring Batch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="0-摘要"><a href="#0-摘要" class="headerlink" title="0 摘要"></a>0 摘要</h2><p>本文整理自Spring Batch官方文档。</p>
+<p>Spring Batch官方文档中，提供两种实例代码，XML和Java Config，默认选择Java Config。</p>
+<h2 id="1-Spring-Batch-简介"><a href="#1-Spring-Batch-简介" class="headerlink" title="1 Spring Batch 简介"></a>1 Spring Batch 简介</h2><h3 id="1-1-Spring-Batch"><a href="#1-1-Spring-Batch" class="headerlink" title="1.1 Spring Batch"></a>1.1 Spring Batch</h3><p>Spring Batch 是一个轻量级，全面的批处理框架，旨在开发对企业系统日常运营至关重要的强大批处理应用程序。Spring Batch 以Spring框架为基础，开发人员可以使用Spring框架的原有服务。</p>
+<h3 id="1-2-使用场景"><a href="#1-2-使用场景" class="headerlink" title="1.2 使用场景"></a>1.2 使用场景</h3><p>通常一个典型的批处理程序如下：</p>
+<ul>
+<li>Read：从数据库，文件或队列中读取大量记录。</li>
+<li>Process：以某种方式处理数据。</li>
+<li>Write：以修改的形式写回数据。</li>
+</ul>
+<p>Spring Batch自动执行此基本批处理迭代，提供处理类似事务的功能，通常在脱机环境中处理，无需任何用户交互。批处理作业是大多数IT项目的一部分，Spring Batch是唯一提供强大的企业级解决方案的开源框架。</p>
+<p>业务场景</p>
+<ul>
+<li>定期提交批处理</li>
+<li>并发批处理：并行处理作业</li>
+<li>分阶段的企业消息驱动处理</li>
+<li>大规模并行批处理</li>
+<li>失败后手动或预定重启</li>
+<li>依赖步骤的顺序处理（使用扩展的toworkflow驱动批次）</li>
+<li>部分处理：跳过记录（例如，回滚时）</li>
+<li>整批交易，适用于批量较小或现有存储过程/脚本的情况</li>
+</ul>
+<p>技术目标</p>
+<ul>
+<li>批处理开发人员使用Spring编程模型：专注于业务逻辑，让框架负责基础架构。</li>
+<li>清楚地分离基础架构，批处理执行环境和批处理应用程序之间的关注点。</li>
+<li>提供通用的核心执行服务作为所有项目可以实现的接口。</li>
+<li>提供可以“开箱即用”使用的核心执行接口的简单和默认实现。</li>
+<li>通过在所有层中利用spring框架，易于配置，定制和扩展服务。</li>
+<li>所有现有核心服务都应易于更换或扩展，而不会对基础架构层产生任何影响。</li>
+<li>提供一个简单的部署模型，使用Maven构建的架构JAR与应用程序完全分离。</li>
+</ul>
+<h3 id="1-3-Spring-Batch-架构"><a href="#1-3-Spring-Batch-架构" class="headerlink" title="1.3 Spring Batch 架构"></a>1.3 Spring Batch 架构</h3><p>Spring Batch的设计具有可扩展性和多样化的最终用户群。下图显示了支持最终用户开发人员的可扩展性和易用性的分层体系结构。</p>
+<p><img src="https://docs.spring.io/spring-batch/4.1.x/reference/html/images/spring-batch-layers.png" alt="Spring Batch Architecture"></p>
+<p>这种分层架构突出了三个主要的高级组件：应用程序，核心和基础架构。该应用程序包含开发人员使用Spring Batch编写的所有批处理作业和自定义代码。Batch Core包含启动和控制批处理作业所需的核心运行时类。它包括实现 JobLauncher，Job和Step。Application和Core都建立在通用基础架构之上。此基础结构包含常见的读取器和编写器和服务（例如RetryTemplate），应用程序开发人员（读取器和编写器，如ItemReader和ItemWriter）以及核心框架本身（重试，它是自己的库）都使用它们。</p>
+<h3 id="1-4-官方提供的构建策略"><a href="#1-4-官方提供的构建策略" class="headerlink" title="1.4 官方提供的构建策略"></a>1.4 官方提供的构建策略</h3><p>在开始设计批处理作业时，应将业务逻辑分解为一系列步骤，这些步骤可使用以下标准构建块实现：</p>
+<ul>
+<li><p>转换应用程序：对于由外部系统提供或生成的每种类型的文件，必须创建转换应用程序，以将提供的事务记录转换为处理所需的标准格式。</p>
+</li>
+<li><p>验证应用程序：验证应用程序确保所有输入/输出记录正确且一致。</p>
+</li>
+<li><p>提取应用程序：从数据库或输入文件中读取一组记录，根据预定义规则选择记录，并将记录写入输出文件的应用程序。</p>
+</li>
+<li><p>提取/更新应用程序：从数据库或输入文件中读取记录，并对由每个输入记录中的数据驱动的数据库或输出文件进行更改的应用程序。</p>
+</li>
+<li><p>处理和更新应用程序：从提取或验证应用程序对输入事务执行处理的应用程序。处理通常涉及读取数据库以获取处理所需的数据，可能更新数据库并创建输出处理的记录。</p>
+</li>
+<li><p>输出/格式应用程序：读取输入文件的应用程序，根据标准格式从该记录重组数据，并生成用于打印或传输到另一个程序或系统的输出文件。</p>
+</li>
+</ul>
+<p>批量应用程序还可以按其输入源进行分类：</p>
+<ul>
+<li>数据库驱动的应用程序由从数据库检索的行或值驱动。</li>
+<li>文件驱动的应用程序由从文件中检索的记录或值驱动。</li>
+<li>消息驱动的应用程序由从消息队列中检索的消息驱动。</li>
+</ul>
+<h2 id="2-批处理的基本概念"><a href="#2-批处理的基本概念" class="headerlink" title="2 批处理的基本概念"></a>2 批处理的基本概念</h2><p>下图是批量参考体系结构的简化版本，已使用了数十年。Spring Batch提供了健壮，可维护系统中常见的层，组件和技术服务的物理实现，这些系统用于解决简单到复杂批处理应用程序的创建问题，其基础结构和扩展可满足非常复杂的处理需求。</p>
+<p><img src="https://docs.spring.io/spring-batch/4.1.x/reference/html/images/spring-batch-reference-model.png" alt="Batch SysArch"></p>
+<h3 id="2-1-Job"><a href="#2-1-Job" class="headerlink" title="2.1 Job"></a>2.1 Job</h3><p>在Spring Batch中，Job是Step实例的容器。</p>
+<p>Job的配置包含：</p>
+<ul>
+<li>易于理解的名字</li>
+<li>Step实例的定义和排序</li>
+<li>是否可重启</li>
+</ul>
+<h4 id="2-1-1-JobInstance"><a href="#2-1-1-JobInstance" class="headerlink" title="2.1.1 JobInstance"></a>2.1.1 JobInstance</h4><h4 id="2-1-2-JobParameters"><a href="#2-1-2-JobParameters" class="headerlink" title="2.1.2 JobParameters"></a>2.1.2 JobParameters</h4><h4 id="2-1-3-JobExecution"><a href="#2-1-3-JobExecution" class="headerlink" title="2.1.3 JobExecution"></a>2.1.3 JobExecution</h4><h3 id="2-2-Step"><a href="#2-2-Step" class="headerlink" title="2.2 Step"></a>2.2 Step</h3><h3 id="2-3-ExecutionContext"><a href="#2-3-ExecutionContext" class="headerlink" title="2.3 ExecutionContext"></a>2.3 ExecutionContext</h3><h3 id="2-4-JobRepository"><a href="#2-4-JobRepository" class="headerlink" title="2.4 JobRepository"></a>2.4 JobRepository</h3><h3 id="2-5-JobLauncher"><a href="#2-5-JobLauncher" class="headerlink" title="2.5 JobLauncher"></a>2.5 JobLauncher</h3><h3 id="2-6-Item-Reader"><a href="#2-6-Item-Reader" class="headerlink" title="2.6 Item Reader"></a>2.6 Item Reader</h3><h3 id="2-7-Item-Writer"><a href="#2-7-Item-Writer" class="headerlink" title="2.7 Item Writer"></a>2.7 Item Writer</h3><h3 id="2-8-Item-Processor"><a href="#2-8-Item-Processor" class="headerlink" title="2.8 Item Processor"></a>2.8 Item Processor</h3><h3 id="2-9-Batch-Namespace"><a href="#2-9-Batch-Namespace" class="headerlink" title="2.9 Batch Namespace"></a>2.9 Batch Namespace</h3>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Java/java-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Java/java-config/" itemprop="url">
+                  Java Config 注解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T00:00:00+00:00">
+                2019-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>java config是指基于java配置的spring。传统的Spring一般都是基本xml配置的，后来spring3.0新增了许多java config的注解，特别是spring boot，基本都是清一色的java config。</p>
+<h4 id="Configuration"><a href="#Configuration" class="headerlink" title="@Configuration"></a>@Configuration</h4><p>在类上打上这一标签，表示这个类是配置类</p>
+<h4 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h4><p>相当于xml的</p>
+<pre><code>&lt;context:componentscan basepakage=&gt;
+</code></pre><h4 id="Bean"><a href="#Bean" class="headerlink" title="@Bean"></a>@Bean</h4><p>bean的定义，相当于xml的</p>
+<pre><code>&lt;bean id=&quot;objectMapper&quot; class=&quot;org.codehaus.jackson.map.ObjectMapper&quot; /&gt; 
+</code></pre><h4 id="EnableWebMvc"><a href="#EnableWebMvc" class="headerlink" title="@EnableWebMvc"></a>@EnableWebMvc</h4><p>相当于xml的</p>
+<pre><code>&lt;mvc:annotation-driven&gt;
+</code></pre><h4 id="ImportResource"><a href="#ImportResource" class="headerlink" title="@ImportResource"></a>@ImportResource</h4><p>相当于xml的</p>
+<pre><code>&lt;import resource=&quot;applicationContext-cache.xml&quot;&gt;
+</code></pre><h4 id="PropertySource"><a href="#PropertySource" class="headerlink" title="@PropertySource"></a>@PropertySource</h4><p>spring 3.1开始引入，它是基于java config的注解，用于读取properties文件</p>
+<h4 id="Profile"><a href="#Profile" class="headerlink" title="@Profile"></a>@Profile</h4><p>spring3.1开始引入,一般用于多环境配置，激活时可用@ActiveProfiles注解，@ActiveProfiles(“dev”)等同于xml配置</p>
+<pre><code>&lt;beans profile=&quot;dev&quot;&gt;
+    &lt;bean id=&quot;beanname&quot; class=&quot;com.pz.demo.ProductRPC&quot;/&gt;
+&lt;/beans&gt;
+</code></pre><p>激活该profile spring.profiles.active，也可设置默认值 spring.profiles.default</p>
+<pre><code>&lt;context-param&gt;
+    &lt;param-name&gt;spring.profiles.default&lt;/param-name&gt;
+    &lt;param-value&gt;dev&lt;/param-value&gt;
+&lt;/context-param&gt;
+</code></pre><p>参考：<a href="https://www.cnblogs.com/whx7762/p/7828435.html" target="_blank" rel="noopener">Java Config 注解</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/gson/gson-usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/gson/gson-usage/" itemprop="url">
+                  gson的一些用法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-18T00:00:00+00:00">
+                2018-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/gson/" itemprop="url" rel="index">
+                    <span itemprop="name">gson</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1、自定义json中key的名字"><a href="#1、自定义json中key的名字" class="headerlink" title="1、自定义json中key的名字"></a>1、自定义json中key的名字</h4><p>可以在Java里面的属性上，加上如下注释：@SerializedName()</p>
+<p>例如：  </p>
+<pre><code>@SerializedName(&quot;businesscontrolno&quot;)
+</code></pre><p>参考：<a href="https://www.jianshu.com/p/e740196225a4" target="_blank" rel="noopener">https://www.jianshu.com/p/e740196225a4</a></p>
+<h4 id="2、gson处理null字段"><a href="#2、gson处理null字段" class="headerlink" title="2、gson处理null字段"></a>2、gson处理null字段</h4><pre><code>Gson g = new GsonBuilder().serializeNulls().create();
+</code></pre><h4 id="3、gson处理日期字段"><a href="#3、gson处理日期字段" class="headerlink" title="3、gson处理日期字段"></a>3、gson处理日期字段</h4><pre><code>Gson g = new GsonBuilder().setDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;).create();
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/ElasticSearch/elasticsearch-operation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/ElasticSearch/elasticsearch-operation/" itemprop="url">
+                  ElasticSearch的一些操作
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T00:00:00+00:00">
+                2018-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/ElasticSearch/" itemprop="url" rel="index">
+                    <span itemprop="name">ElasticSearch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1、update"><a href="#1、update" class="headerlink" title="1、update"></a>1、update</h3><p>POST <a href="http://es.zbc.io/{index}/{type}/{id}/_update" target="_blank" rel="noopener">http://es.zbc.io/{index}/{type}/{id}/_update</a></p>
+<pre><code>{
+  &quot;doc&quot;: {
+    &quot;{column}&quot;: &quot;{value}&quot;
+  }
+}
+</code></pre><p>例如：<br>POST <a href="http://es.zbc.io/logstash-car-ctrl/prpbusinesscontrol/" target="_blank" rel="noopener">http://es.zbc.io/logstash-car-ctrl/prpbusinesscontrol/</a></p>
+<pre><code>B201800044820/_update
+{
+  &quot;doc&quot;: {
+    &quot;validstatus&quot;: &quot;0&quot;
+  }
+}
+</code></pre><p>参考：<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/partial-updates.html" target="_blank" rel="noopener">https://www.elastic.co/guide/cn/elasticsearch/guide/current/partial-updates.html</a></p>
+<h4 id="2、insert"><a href="#2、insert" class="headerlink" title="2、insert"></a>2、insert</h4><p>PUT <a href="http://es.zbc.io/{index}/{type}/{id}" target="_blank" rel="noopener">http://es.zbc.io/{index}/{type}/{id}</a></p>
+<pre><code>{
+  &quot;field&quot;: &quot;value&quot;,
+  ...
+}
+</code></pre><p>例如：<br>PUT <a href="http://es.zbc.io/logstash-car-ctrl/prpbusinesscontrol/B201800044820" target="_blank" rel="noopener">http://es.zbc.io/logstash-car-ctrl/prpbusinesscontrol/B201800044820</a></p>
+<pre><code>{
+    &quot;validstatus&quot;: &quot;0&quot;
+}
+</code></pre><h4 id="3、创建-raw索引"><a href="#3、创建-raw索引" class="headerlink" title="3、创建.raw索引"></a>3、创建.raw索引</h4><p>PUT <a href="http://es.zbc.io/{index}" target="_blank" rel="noopener">http://es.zbc.io/{index}</a></p>
+<pre><code>{
+  &quot;mappings&quot;: {
+    &quot;{type}&quot;: {
+      &quot;properties&quot;: {
+        &quot;{column}&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;fields&quot;: {
+            &quot;raw&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;index&quot;: &quot;not_analyzed&quot;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre><p>例如：<br>POST <a href="http://es.zbc.io/logstash-car-ctrl" target="_blank" rel="noopener">http://es.zbc.io/logstash-car-ctrl</a></p>
+<pre><code>{
+  &quot;mappings&quot;: {
+    &quot;prpbusinesscontrol&quot;: {
+      &quot;properties&quot;: {
+        &quot;engineno&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;fields&quot;: {
+            &quot;raw&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;index&quot;: &quot;not_analyzed&quot;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre><h4 id="4、新增字段"><a href="#4、新增字段" class="headerlink" title="4、新增字段"></a>4、新增字段</h4><p>POST <a href="http://es.zbc.io/{index}/{type}/_mapping" target="_blank" rel="noopener">http://es.zbc.io/{index}/{type}/_mapping</a></p>
+<pre><code>{
+  &quot;properties&quot;: {
+    &quot;{column}&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;fields&quot;: {
+        &quot;raw&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;index&quot;: &quot;not_analyzed&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre><p>例如：<br>POST <a href="http://es.zbc.io/logstash-car-ctrl/prpbusinesscontrol/_mapping" target="_blank" rel="noopener">http://es.zbc.io/logstash-car-ctrl/prpbusinesscontrol/_mapping</a></p>
+<pre><code>{
+  &quot;properties&quot;: {
+    &quot;vinno2&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;fields&quot;: {
+        &quot;raw&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;index&quot;: &quot;not_analyzed&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/ElasticSearch/elasticsearch-faq/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/ElasticSearch/elasticsearch-faq/" itemprop="url">
+                  ElasticSearch报错汇总
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T00:00:00+00:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/ElasticSearch/" itemprop="url" rel="index">
+                    <span itemprop="name">ElasticSearch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1、error-’Cannot-allocate-memory’-errno-12"><a href="#1、error-’Cannot-allocate-memory’-errno-12" class="headerlink" title="1、error=’Cannot allocate memory’ (errno=12)"></a>1、error=’Cannot allocate memory’ (errno=12)</h3><h4 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h4><p>这种情况是因为内存不足</p>
+<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><p>使用如下方式修改jvm启动内存参数：</p>
+<pre><code>[es@CentOS ~]$ vi elasticsearch/config/jvm.options
+
+-Xms512m
+-Xmx512m
+</code></pre><h3 id="2、max-virtual-memory-areas-vm-max-map-count-65530-is-too-low-increase-to-at-least-262144"><a href="#2、max-virtual-memory-areas-vm-max-map-count-65530-is-too-low-increase-to-at-least-262144" class="headerlink" title="2、max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]"></a>2、max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</h3><h4 id="解决办法：-1"><a href="#解决办法：-1" class="headerlink" title="解决办法："></a>解决办法：</h4><p>切换到root用户修改配置sysctl.conf</p>
+<pre><code>vi /etc/sysctl.conf
+</code></pre><p>添加下面配置：</p>
+<pre><code>vm.max_map_count=655360
+</code></pre><p>并执行命令：</p>
+<pre><code>sysctl -p
+</code></pre><p>然后，重新启动elasticsearch，即可启动成功。</p>
+<h3 id="3、-es-CentOS-elasticsearch-head-npm-install"><a href="#3、-es-CentOS-elasticsearch-head-npm-install" class="headerlink" title="3、[es@CentOS elasticsearch-head]# npm install"></a>3、[es@CentOS elasticsearch-head]# npm install</h3><p>npm ERR! Error: CERT_UNTRUSTED</p>
+<h4 id="解决办法：-2"><a href="#解决办法：-2" class="headerlink" title="解决办法："></a>解决办法：</h4><p>这是因为ssl验证问题，使用下面的命令取消ssl验证即可解决：</p>
+<pre><code>npm config set strict-ssl false
+</code></pre><h3 id="4、-es-CentOS-elasticsearch-head-npm-install"><a href="#4、-es-CentOS-elasticsearch-head-npm-install" class="headerlink" title="4、[es@CentOS elasticsearch-head]# npm install"></a>4、[es@CentOS elasticsearch-head]# npm install</h3><p>SyntaxError: Use of const in strict mode.</p>
+<h4 id="解决办法：-3"><a href="#解决办法：-3" class="headerlink" title="解决办法："></a>解决办法：</h4><p>1) Clear NPM’s cache:</p>
+<pre><code>sudo npm cache clean -f
+</code></pre><p>2) Install a little helper called ‘n’</p>
+<pre><code>sudo npm install -g n
+</code></pre><p>3) Install latest stable NodeJS version</p>
+<pre><code>sudo n stable
+</code></pre><h3 id="5、max-file-descriptors-65535-for-elasticsearch-process-is-too-low-increase-to-at-least-65536"><a href="#5、max-file-descriptors-65535-for-elasticsearch-process-is-too-low-increase-to-at-least-65536" class="headerlink" title="5、max file descriptors [65535] for elasticsearch process is too low, increase to at least [65536]"></a>5、max file descriptors [65535] for elasticsearch process is too low, increase to at least [65536]</h3><h4 id="解决办法：-4"><a href="#解决办法：-4" class="headerlink" title="解决办法："></a>解决办法：</h4><p>切换到root用户修改配置sysctl.conf</p>
+<pre><code>vi /etc/sysctl.conf
+</code></pre><p>添加下面配置：</p>
+<pre><code>fs.file-max=655350
+</code></pre><p>并执行命令：</p>
+<pre><code>sysctl -p
+</code></pre><p>然后，重新启动elasticsearch，即可启动成功。</p>
+<h3 id="6、max-number-of-threads-1024-for-user-es-is-too-low-increase-to-at-least-4096"><a href="#6、max-number-of-threads-1024-for-user-es-is-too-low-increase-to-at-least-4096" class="headerlink" title="6、max number of threads [1024] for user [es] is too low, increase to at least [4096]"></a>6、max number of threads [1024] for user [es] is too low, increase to at least [4096]</h3><h4 id="解决办法：-5"><a href="#解决办法：-5" class="headerlink" title="解决办法："></a>解决办法：</h4><p>1、切换到root用户修改配置</p>
+<pre><code>vi /etc/security/limits.d/90-nproc.conf
+</code></pre><p>添加下面配置：</p>
+<pre><code>* soft nproc 4096
+</code></pre><p>2、修改配置</p>
+<pre><code>vi /etc/security/limits.conf
+</code></pre><p>添加下面配置：</p>
+<pre><code>* soft nproc 2048
+* hard nproc 4096
+</code></pre><p>并执行命令：</p>
+<pre><code>sysctl -p
+</code></pre><p>然后，重新启动elasticsearch，即可启动成功。</p>
+<h3 id="7、Could-not-reliably-determine-the-server’s-fully-qualified-domain-name-using-10-117-235-227-for-ServerName"><a href="#7、Could-not-reliably-determine-the-server’s-fully-qualified-domain-name-using-10-117-235-227-for-ServerName" class="headerlink" title="7、Could not reliably determine the server’s fully qualified domain name, using 10.117.235.227 for ServerName"></a>7、Could not reliably determine the server’s fully qualified domain name, using 10.117.235.227 for ServerName</h3><h4 id="原因：-1"><a href="#原因：-1" class="headerlink" title="原因："></a>原因：</h4><p>此问题是在用httpd服务器做端口转发时遇到的问题。域名解析到此服务器，然后把9200端口转发到80端口，访问搜索引擎时就不用再域名后加端口了。</p>
+<h4 id="解决办法：-6"><a href="#解决办法：-6" class="headerlink" title="解决办法："></a>解决办法：</h4><p>修改/etc/apache2/httpd.conf</p>
+<pre><code>vi /etc/apache2/httpd.conf
+</code></pre><p>找到如下配置，去掉注释：</p>
+<pre><code>ServerName localhost:80
+</code></pre><p>重启httpd即可。</p>
+<h3 id="8、system-call-filters-failed-to-install-check-the-logs-and-fix-your-configuration-or-disable-system-call-filters-at-your-own-risk"><a href="#8、system-call-filters-failed-to-install-check-the-logs-and-fix-your-configuration-or-disable-system-call-filters-at-your-own-risk" class="headerlink" title="8、system call filters failed to install; check the logs and fix your configuration or disable system call filters at your own risk"></a>8、system call filters failed to install; check the logs and fix your configuration or disable system call filters at your own risk</h3><h4 id="原因：-2"><a href="#原因：-2" class="headerlink" title="原因："></a>原因：</h4><p>CentOS6.X 不支持SecComp，而ES5.2.0默认bootstrap.system_call_filter为true进行检测，所以导致检测失败，失败后直接导致ES不能启动。</p>
+<h4 id="解决办法：-7"><a href="#解决办法：-7" class="headerlink" title="解决办法："></a>解决办法：</h4><p>修改/opt/es/elasticsearch-5.5.0/config/elasticsearch.yml中配置</p>
+<pre><code>vi /opt/es/elasticsearch-5.5.0/config/elasticsearch.yml
+</code></pre><p>修改如下配置：</p>
+<pre><code>bootstrap.memory_lock: false
+bootstrap.system_call_filter: false
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Other/url-encode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Other/url-encode/" itemprop="url">
+                  URL编码/解码
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T00:00:00+00:00">
+                2018-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Other/" itemprop="url" rel="index">
+                    <span itemprop="name">Other</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一、为什么需要URL编码？"><a href="#一、为什么需要URL编码？" class="headerlink" title="一、为什么需要URL编码？"></a>一、为什么需要URL编码？</h3><p>通常如果一样东西需要编码，说明这样东西并不适合传输。原因多种多样，如Size过大，包含隐私数据，对于URL来说，之所以要进行编码，是因为URL中有些字符会引起歧义。</p>
+<p>例如URL参数字符串中使用key=value键值对这样的形式来传参，键值对之间以&amp;符号分隔，如/s?q=abc&amp;ie=utf-8。如果你的value字符串中包含了=或者&amp;，那么势必会造成接收URL的服务器解析错误，因此必须将引起歧义的&amp;和=符号进行转义，也就是对其进行编码。</p>
+<p>又如，URL的编码格式采用的是ASCII码，而不是Unicode，这也就是说你不能在URL中包含任何非ASCII字符，例如中文。否则如果客户端浏览器和服务端浏览器支持的字符集不同的情况下，中文可能会造成问题。</p>
+<p>URL编码的原则就是使用安全的字符（没有特殊用途或者特殊意义的可打印字符）去表示那些不安全的字符。</p>
+<h3 id="二、哪些字符需要编码？"><a href="#二、哪些字符需要编码？" class="headerlink" title="二、哪些字符需要编码？"></a>二、哪些字符需要编码？</h3><pre><code>RFC3986文档规定，URL中只允许包含英文字母（a-zA-Z）、数字（0-9）、-_.~4个特殊字符以及所有保留字符。
+</code></pre><p>RFC3986文档对URL的编解码问题做出了详细的建议，指出了哪些字符需要被编码才不会引起URL语义的转变，以及对为什么这些字符需要编码做出了相应的解释。</p>
+<h4 id="US-ASCII字符集中没有对应的可打印字符"><a href="#US-ASCII字符集中没有对应的可打印字符" class="headerlink" title="US-ASCII字符集中没有对应的可打印字符"></a>US-ASCII字符集中没有对应的可打印字符</h4><p>URL中只允许使用可打印字符。US-ASCII码中的10-7F字节全都表示控制字符，这些字符都不能直接出现在URL中。同时，对于80-FF字节（ISO-8859-1），由于已经超出了US-ACII定义的字节范围，因此也不可以放在URL中。</p>
+<h4 id="保留字符"><a href="#保留字符" class="headerlink" title="保留字符"></a>保留字符</h4><p>URL可以划分成若干个组件，协议、主机、路径等。有一些字符（:/?#[]@）是用作分隔不同组件的。</p>
+<p>例如:冒号用于分隔协议和主机，/用于分隔主机和路径，?用于分隔路径和查询参数，等等。</p>
+<p>还有一些字符（!$&amp;’()*+,;=）用于在每个组件中起到分隔作用的，如=用于表示查询参数中的键值对，&amp;符号用于分隔查询多个键值对。当组件中的普通数据包含这些特殊字符时，需要对其进行编码。</p>
+<p>RFC3986中指定了以下字符为保留字符：</p>
+<pre><code>!    *    &apos;    (    )    ;    :    @    &amp;    =    +    $    ,    /    ?    #    [    ]
+</code></pre><h4 id="不安全字符"><a href="#不安全字符" class="headerlink" title="不安全字符"></a>不安全字符</h4><p>还有一些字符，当他们直接放在URL中的时候，可能会引起解析程序的歧义。这些字符被视为不安全字符，原因有很多。</p>
+<table>
+<thead>
+<tr>
+<th>不安全字符</th>
+<th>不安全原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空格</td>
+<td>Url在传输的过程，或者用户在排版的过程，或者文本处理程序在处理Url的过程，都有可能引入无关紧要的空格，或者将那些有意义的空格给去掉</td>
+</tr>
+<tr>
+<td>引号以及&lt;&gt;</td>
+<td>引号和尖括号通常用于在普通文本中起到分隔Url的作用</td>
+</tr>
+<tr>
+<td>#</td>
+<td>通常用于表示书签或者锚点</td>
+</tr>
+<tr>
+<td>%</td>
+<td>百分号本身用作对不安全字符进行编码时使用的特殊字符，因此本身需要编码</td>
+</tr>
+<tr>
+<td>{}&#124;\^[]`~</td>
+<td>某一些网关或者传输代理会篡改这些字符</td>
+</tr>
+</tbody>
+</table>
+<p>需要注意的是，对于Url中的合法字符，编码和不编码是等价的，但是对于上面提到的这些字符，如果不经过编码，那么它们有可能会造成Url语义的不同。因此对于Url而言，只有普通英文字符和数字，特殊字符$-_.+!*’()还有保留字符，才能出现在未经编码的Url之中。其他字符均需要经过编码之后才能出现在Url中。</p>
+<p>但是由于历史原因，目前尚存在一些不标准的编码实现。例如对于~符号，虽然RFC3986文档规定，对于波浪符号~，不需要进行Url编码，但是还是有很多老的网关或者传输代理会。</p>
+<h3 id="三、如何对Url中的非法字符进行编码"><a href="#三、如何对Url中的非法字符进行编码" class="headerlink" title="三、如何对Url中的非法字符进行编码"></a>三、如何对Url中的非法字符进行编码</h3><p>Url编码通常也被称为百分号编码（Url Encoding，also known as percent-encoding），是因为它的编码方式非常简单，使用%百分号加上两位的字符——0123456789ABCDEF——代表一个字节的十六进制形式。Url编码默认使用的字符集是US-ASCII。例如a在US-ASCII码中对应的字节是0x61，那么Url编码之后得到的就是%61，我们在地址栏上输入<a href="http://g.cn/search?q=%61%62%63" target="_blank" rel="noopener">http://g.cn/search?q=%61%62%63</a><br>实际上就等同于在google上搜索abc了。又如@符号在ASCII字符集中对应的字节为0x40，经过Url编码之后得到的是%40。</p>
+<p>常见保留字符的Url编码列表：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!</td>
+<td>*</td>
+<td>“</td>
+<td>‘</td>
+<td>(</td>
+<td>)</td>
+<td>;</td>
+<td>:</td>
+<td>@</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>%21</td>
+<td>%2A</td>
+<td>%22</td>
+<td>%27</td>
+<td>%28</td>
+<td>%29</td>
+<td>%3B</td>
+<td>%3A</td>
+<td>%40</td>
+<td>%26</td>
+</tr>
+<tr>
+<td>=</td>
+<td>+</td>
+<td>$</td>
+<td>,</td>
+<td>/</td>
+<td>?</td>
+<td>%</td>
+<td>#</td>
+<td>[</td>
+<td>]</td>
+</tr>
+<tr>
+<td>%3D</td>
+<td>%2B</td>
+<td>%24</td>
+<td>%2C</td>
+<td>%2F</td>
+<td>%3F</td>
+<td>%25</td>
+<td>%23</td>
+<td>%5B</td>
+<td>%5D</td>
+</tr>
+</tbody>
+</table>
+<p>对于非ASCII字符，需要使用ASCII字符集的超集进行编码得到相应的字节，然后对每个字节执行百分号编码。对于Unicode字符，RFC文档建议使用utf-8对其进行编码得到相应的字节，然后对每个字节执行百分号编码。如“中文”使用UTF-8字符集得到的字节为0xE4 0xB8 0xAD 0xE6 0x96 0x87，经过Url编码之后得到“%E4%B8%AD%E6%96%87”。</p>
+<p>如果某个字节对应着ASCII字符集中的某个非保留字符，则此字节无需使用百分号表示。例如“Url编码”，使用UTF-8编码得到的字节是0x55 0x72 0x6C 0xE7 0xBC 0x96 0xE7 0xA0 0x81，由于前三个字节对应着ASCII中的非保留字符“Url”，因此这三个字节可以用非保留字符“Url”表示。最终的Url编码可以简化成“Url%E7%BC%96%E7%A0%81” ，当然，如果你用”%55%72%6C%E7%BC%96%E7%A0%81”也是可以的。</p>
+<p>由于历史的原因，有一些Url编码实现并不完全遵循这样的原则，下面会提到。</p>
+<h3 id="四、Javascript中的escape-encodeURI和encodeURIComponent的区别"><a href="#四、Javascript中的escape-encodeURI和encodeURIComponent的区别" class="headerlink" title="四、Javascript中的escape,encodeURI和encodeURIComponent的区别"></a>四、Javascript中的escape,encodeURI和encodeURIComponent的区别</h3><p>Javascript中提供了3对函数用来对Url编码以得到合法的Url，它们分别是escape / unescape,encodeURI / decodeURI和encodeURIComponent / decodeURIComponent。由于解码和编码的过程是可逆的，因此这里只解释编码的过程。</p>
+<p>这三个编码的函数——escape，encodeURI，encodeURIComponent——都是用于将不安全不合法的Url字符转换为合法的Url字符表示，它们有以下几个不同点。</p>
+<h4 id="安全字符不同"><a href="#安全字符不同" class="headerlink" title="安全字符不同"></a>安全字符不同</h4><p>下面的表格列出了这三个函数的安全字符（即函数不会对这些字符进行编码）</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>安全字符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>escape（69个）</td>
+<td>*/@+-._0-9a-zA-Z</td>
+</tr>
+<tr>
+<td>encodeURI（82个）</td>
+<td>!#$&amp;’()*+,/:;=?@-._~0-9a-zA-Z</td>
+</tr>
+<tr>
+<td>encodeURIComponent（71个）</td>
+<td>!’()*-._~0-9a-zA-Z</td>
+</tr>
+</tbody>
+</table>
+<h4 id="兼容性不同"><a href="#兼容性不同" class="headerlink" title="兼容性不同"></a>兼容性不同</h4><p>escape函数是从Javascript1.0的时候就存在了，其他两个函数是在Javascript1.5才引入的。但是由于Javascript1.5已经非常普及了，所以实际上使用encodeURI和encodeURIComponent并不会有什么兼容性问题。</p>
+<h4 id="对Unicode字符的编码方式不同"><a href="#对Unicode字符的编码方式不同" class="headerlink" title="对Unicode字符的编码方式不同"></a>对Unicode字符的编码方式不同</h4><p>这三个函数对于ASCII字符的编码方式相同，均是使用百分号+两位十六进制字符来表示。但是对于Unicode字符，escape的编码方式是%uxxxx，其中的xxxx是用来表示unicode字符的4位十六进制字符。这种方式已经被W3C废弃了。但是在ECMA-262标准中仍然保留着escape的这种编码语法。encodeURI和encodeURIComponent则使用UTF-8对非ASCII字符进行编码，然后再进行百分号编码。这是RFC推荐的。因此建议尽可能的使用这两个函数替代escape进行编码。</p>
+<h4 id="适用场合不同"><a href="#适用场合不同" class="headerlink" title="适用场合不同"></a>适用场合不同</h4><p>encodeURI被用作对一个完整的URI进行编码，而encodeURIComponent被用作对URI的一个组件进行编码。</p>
+<p>从上面提到的安全字符范围表格来看，我们会发现，encodeURIComponent编码的字符范围要比encodeURI的大。我们上面提到过，保留字符一般是用来分隔URI组件（一个URI可以被切割成多个组件，参考预备知识一节）或者子组件（如URI中查询参数的分隔符），如:号用于分隔scheme和主机，?号用于分隔主机和路径。由于encodeURI操纵的对象是一个完整的的URI，这些字符在URI中本来就有特殊用途，因此这些保留字符不会被encodeURI编码，否则意义就变了。</p>
+<p>组件内部有自己的数据表示格式，但是这些数据内部不能包含有分隔组件的保留字符，否则就会导致整个URI中组件的分隔混乱。因此对于单个组件使用encodeURIComponent，需要编码的字符就更多了。</p>
+<h3 id="五、表单提交"><a href="#五、表单提交" class="headerlink" title="五、表单提交"></a>五、表单提交</h3><p>当Html的表单被提交时，每个表单域都会被Url编码之后才在被发送。由于历史的原因，表单使用的Url编码实现并不符合最新的标准。例如对于空格使用的编码并不是%20，而是+号，如果表单使用的是Post方法提交的，我们可以在HTTP头中看到有一个Content-Type的header，值为application/x-www-form-urlencoded。大部分应用程序均能处理这种非标准实现的Url编码，但是在客户端Javascript中，并没有一个函数能够将+号解码成空格，只能自己写转换函数。还有，对于非ASCII字符，使用的编码字符集取决于当前文档使用的字符集。例如我们在Html头部加上</p>
+<pre><code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+</code></pre><p>这样浏览器就会使用gb2312去渲染此文档（注意，当HTML文档中没有设置此meta标签，则浏览器会根据当前用户喜好去自动选择字符集，用户也可以强制当前网站使用某个指定的字符集）。当提交表单时，Url编码使用的字符集就是gb2312。</p>
+<h3 id="六、文档字符集会影响encodeURI吗？"><a href="#六、文档字符集会影响encodeURI吗？" class="headerlink" title="六、文档字符集会影响encodeURI吗？"></a>六、文档字符集会影响encodeURI吗？</h3><p>之前在使用Aptana（为什么专指aptana下面会提到）遇到一个很迷惑的问题，就是在使用encodeURI的时候，发现它编码得到的结果和我想的很不一样。下面是我的示例代码：</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            document.write(encodeURI(&quot;中文&quot;));
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre><p>运行结果输出%E6%B6%93%EE%85%9F%E6%9E%83。显然这并不是使用UTF-8字符集进行Url编码得到的结果（在Google上搜索“中文”，Url中显示的是%E4%B8%AD%E6%96%87）。</p>
+<p>所以我当时就很质疑，难道encodeURI还跟页面编码有关，但是我发现，正常情况下，如果你使用gb2312进行Url编码也不会得到这个结果的才是。后来终于被我发现，原来是页面文件存储使用的字符集和Meta标签中指定的字符集不一致导致的问题。Aptana的编辑器默认情况下使用UTF-8字符集。也就是说这个文件实际存储的时候使用的是UTF-8字符集。但是由于Meta标签中指定了gb2312，这个时候，浏览器就会按照gb2312去解析这个文档，那么自然在“中文”这个字符串这里就会出错，因为“中文”字符串用UTF-8编码过后得到的字节是0xE4 0xB8 0xAD 0xE6 0x96 0x87，这6个字节又被浏览器拿gb2312去解码，那么就会得到另外三个汉字“涓枃”（GBK中一个汉字占两个字节），这三个汉字在传入encodeURI函数之后得到的结果就是%E6%B6%93%EE%85%9F%E6%9E%83。因此，encodeURI使用的还是UTF-8，并不会受到页面字符集的影响。</p>
+<h3 id="七、其他和Url编码相关的问题"><a href="#七、其他和Url编码相关的问题" class="headerlink" title="七、其他和Url编码相关的问题"></a>七、其他和Url编码相关的问题</h3><p>对于包含中文的Url的处理问题，不同浏览器有不同的表现。例如对于IE，如果你勾选了高级设置“总是以UTF-8发送Url”，那么Url中的路径部分的中文会使用UTF-8进行Url编码之后发送给服务端，而查询参数中的中文部分使用系统默认字符集进行Url编码。为了保证最大互操作性，建议所有放到Url中的组件全部显式指定某个字符集进行Url编码，而不依赖于浏览器的默认实现。</p>
+<p>另外，很多HTTP监视工具或者浏览器地址栏等在显示Url的时候会自动将Url进行一次解码（使用UTF-8字符集），这就是为什么当你在Firefox中访问Google搜索中文的时候，地址栏显示的Url包含中文的缘故。但实际上发送给服务端的原始Url还是经过编码的。你可以在地址栏上使用Javascript访问location.href就可以看出来了。在研究Url编解码的时候千万别被这些假象给迷惑了。</p>
+<p>参考：<a href="http://www.imkevinyang.com/2009/08/%E8%AF%A6%E8%A7%A3javascript%E4%B8%AD%E7%9A%84url%E7%BC%96%E8%A7%A3%E7%A0%81.html" target="_blank" rel="noopener">详解Javascript中的Url编码/解码</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Eclipse/myeclipse-could-not-create-the-jvm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Eclipse/myeclipse-could-not-create-the-jvm/" itemprop="url">
+                  MyEclipse启动服务报错：Could not create the Java virtual machine
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T00:00:00+00:00">
+                2017-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Eclipse/" itemprop="url" rel="index">
+                    <span itemprop="name">Eclipse</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近遇到一个问题，在MyEclipse中启动weblogic时，偶尔会报Could not create the Java virtual machine。开始也没找到什么规律，只知道刚开机的时候就能启动成功。后来感觉不是个办法，还是找找原因吧。原因肯定是和参数设置有关系，但是反复改了好多次参数，尝试了好多次才成功，所以记录一下。</p>
+<p>首先，我的MyEclipse设置如下：</p>
+<pre><code>-Xmx2048m
+-XX:MaxPermSize=256m
+-XX:ReservedCodeCacheSize=64m
+</code></pre><p>weblogic的启动参数设置如下：</p>
+<pre><code>-Xms1024m -Xmx1024m -XX:CompileThreshold=8000 -XX:PermSize=128m -XX:MaxPermSize=512m -Xverify:none -da
+</code></pre><p>电脑的总内存是12GB，内存绝对是够用的。</p>
+<p>后来无意中发现，我把非堆内存的值调低，就可以启动了：</p>
+<pre><code>-Xms1024m -Xmx1024m -XX:CompileThreshold=8000 -XX:PermSize=128m -XX:MaxPermSize=256m -Xverify:none -da
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/微服务/building-microservices/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/微服务/building-microservices/" itemprop="url">
+                  微服务设计
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T00:00:00+00:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/微服务/" itemprop="url" rel="index">
+                    <span itemprop="name">微服务</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、一个微服务应该可以在两周内完全重写。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="百成">
+          <p class="site-author-name" itemprop="name">百成</p>
+           
+              <p class="site-description motion-element" itemprop="description">A journey of a thousand miles must begin with a single step</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zbc0512" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/727750999" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">百成</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

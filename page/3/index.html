@@ -1,0 +1,2409 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans,en,default">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Zhang BaiCheng's Programming Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="A journey of a thousand miles must begin with a single step">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:url" content="http://zbc.io/page/3/index.html">
+<meta property="og:site_name" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:description" content="A journey of a thousand miles must begin with a single step">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta name="twitter:description" content="A journey of a thousand miles must begin with a single step">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zbc.io/page/3/">
+
+
+
+
+
+  <title> Zhang BaiCheng's Programming Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?657a2d6ff2f408bb3176a1b2e1f63785";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zhang BaiCheng's Programming Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sharp tools make good work</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Hibernate/hibernate3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Hibernate/hibernate3/" itemprop="url">
+                  Hibernate3的一些问题总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-12T00:00:00+00:00">
+                2016-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Hibernate/" itemprop="url" rel="index">
+                    <span itemprop="name">Hibernate</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>以下是学习Hibernate3时遇到的一些问题，这里统一做一个总结，供后续参考。  </p>
+<h4 id="1-一些基本配置"><a href="#1-一些基本配置" class="headerlink" title="1. 一些基本配置"></a><font color="#F00">1. 一些基本配置</font></h4><pre><code>&lt;!-- 显示sql语句 --&gt;
+&lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
+&lt;!-- 格式化sql语句 --&gt;
+&lt;prop key=&quot;hibernate.format_sql&quot;&gt;false&lt;/prop&gt;
+</code></pre><h4 id="2-一些注解"><a href="#2-一些注解" class="headerlink" title="2. 一些注解"></a><font color="#F00">2. 一些注解</font></h4><p>@Transient数据库中不存在的字段<br>@Temporal可以指定日期格式<br>@Enumerated枚举类型，参数可以指定数据类型<br>@GeneratedValue主键自增</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Struts2/struts2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Struts2/struts2/" itemprop="url">
+                  Struts2的一些问题总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-12T00:00:00+00:00">
+                2016-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Struts2/" itemprop="url" rel="index">
+                    <span itemprop="name">Struts2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>以下是学习Struts2时遇到的一些问题，这里统一做一个总结，供后续参考。  </p>
+<h4 id="1-如何在eclipse中查看源码"><a href="#1-如何在eclipse中查看源码" class="headerlink" title="1. 如何在eclipse中查看源码"></a><font color="#F00">1. 如何在eclipse中查看源码</font></h4><p>在Package Explorer中右键jar文件 &gt; Properties &gt; Java Source Attachment &gt; External location &gt; External Folder<br>选中struts-2.3.28/src/core/src/main/java文件夹，OK。</p>
+<h4 id="2-如何在eclipse中查看Javadoc文档"><a href="#2-如何在eclipse中查看Javadoc文档" class="headerlink" title="2. 如何在eclipse中查看Javadoc文档"></a><font color="#F00">2. 如何在eclipse中查看Javadoc文档</font></h4><p>在Package Explorer中右键jar文件 &gt; Properties &gt; Javadoc location &gt; Javadoc URL &gt; Browse<br>选中struts-2.3.28/docs/struts2-core-apidocs文件夹，OK。<br>在Java文件中，选中某一个类的名字时，按F1，即可查看Javadoc文档。  </p>
+<h4 id="3-在struts-xml文件中，“-lt-”后面按“Alt-”时，不能自动提示"><a href="#3-在struts-xml文件中，“-lt-”后面按“Alt-”时，不能自动提示" class="headerlink" title="3. 在struts.xml文件中，“&lt;”后面按“Alt+/”时，不能自动提示"></a><font color="#F00">3. 在struts.xml文件中，“&lt;”后面按“Alt+/”时，不能自动提示</font></h4><p>可能是由于xml文件头部的dtd文件没有加载（因为dtd文件是个网络地址）  </p>
+<p>解决：Window &gt; Preferences &gt; XML &gt; XML Catalog &gt; ADD<br>在Location中选中一个本地的dtd文件，Key type选择URI，Key中填上xml文件头部的dtd地址，OK。  </p>
+<h4 id="4-DMI-动态方法调用"><a href="#4-DMI-动态方法调用" class="headerlink" title="4. DMI_动态方法调用"></a><font color="#F00">4. DMI_动态方法调用</font></h4><p>访问action时，可以用[action]![method]的方式来指定要访问哪个action的哪个方法。  </p>
+<p>struts.xml配置为如下才可使用：  </p>
+<pre><code>&lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot; /&gt;
+</code></pre><p>注：不推荐用此种方式，建议用通配符</p>
+<h4 id="5-通配符方式实现动态方法调用"><a href="#5-通配符方式实现动态方法调用" class="headerlink" title="5. 通配符方式实现动态方法调用"></a><font color="#F00">5. 通配符方式实现动态方法调用</font></h4><p>使用*来匹配字符串，示例如下：  </p>
+<pre><code>&lt;action name=&quot;*&quot; class=&quot;io.zbc.struts2.HelloAction&quot; method=&quot;{1}&quot;&gt;
+    &lt;result name=&quot;success&quot;&gt;/{1}.jsp&lt;/result&gt;
+&lt;/action&gt;
+</code></pre><p>其中{1}是指匹配第一个<em>，如果有多个</em>，则可以分别用{1}{2}{3}…来匹配对应位置的*。  </p>
+<p>使用这种方式，可以约定一些方法或jsp的命名，来实现配置的精简。  </p>
+<h4 id="6-Action接收参数"><a href="#6-Action接收参数" class="headerlink" title="6. Action接收参数"></a><font color="#F00">6. Action接收参数</font></h4><p>(1). 直接用属性接收<br>(2). 用DomainModel接收参数，即URL中以[对象].[属性]的方式传参<br>(3). ModelDriven，实现ModelDriven&lt;&gt;接口</p>
+<h4 id="7-设置默认action"><a href="#7-设置默认action" class="headerlink" title="7. 设置默认action"></a><font color="#F00">7. 设置默认action</font></h4><p>例如可以用来实现常见的404页面：  </p>
+<pre><code>&lt;default-action-ref name=&quot;404&quot;&gt;&lt;/default-action-ref&gt;
+&lt;action name=&quot;404&quot; class=&quot;com.opensymphony.xwork2.ActionSupport&quot;&gt;
+  &lt;result name=&quot;success&quot;&gt;/404.jsp&lt;/result&gt;
+&lt;/action&gt;
+</code></pre><h4 id="8-result-type"><a href="#8-result-type" class="headerlink" title="8. result type"></a><font color="#F00">8. result type</font></h4><h5 id="常用："><a href="#常用：" class="headerlink" title="常用："></a>常用：</h5><p>dispatcher: 服务器端跳转，用来转向页面，通常处理JSP，默认的result type。<br>redirect: 客户端跳转，重定向到一个URL，被跳转的页面中丢失传递的信息，如request。<br>chain: 服务器端跳转，用来转向action，被跳转的action中仍能获取上个页面的值，如request信息。<br>redirectAction: 客户端跳转，重定向到一个action，被跳转的页面中丢失传递的信息，如request。  </p>
+<pre><code>// 跳转到指定namespace下的action
+&lt;result type=&quot;chain&quot;&gt;
+    &lt;param name=&quot;actionName&quot;&gt;dashboard&lt;/param&gt;
+    &lt;param name=&quot;namespace&quot;&gt;/secure&lt;/param&gt;
+&lt;/result&gt;
+</code></pre><h5 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h5><p>freemaker: 处理FreeMarker模板。<br>velocity: 处理Velocity模板。<br>xslt: 处理XML/XLST模板。<br>stream: 向浏览器发送InputSream对象，通常用来处理文件下载，还可用于返回AJAX数据。<br>plainText: 显示原始文件内容，例如文件源代码。<br>httpheader: 控制特殊HTTP行为的结果类型。  </p>
+<h4 id="9-global-results"><a href="#9-global-results" class="headerlink" title="9. global-results"></a><font color="#F00">9. global-results</font></h4><pre><code>&lt;global-results&gt;
+    &lt;result name=&quot;error&quot;&gt;/error.jsp&lt;/result&gt;
+&lt;/global-results&gt;
+</code></pre><p>同包下可以共享，如果其他包下的action也想共享此result，可以继承(extends)这个namespace，例如：  </p>
+<pre><code>&lt;package name=&quot;default&quot; namespace=&quot;/&quot; extends=&quot;struts-default&quot;&gt;
+    &lt;global-results&gt;
+        &lt;result name=&quot;error&quot;&gt;/error.jsp&lt;/result&gt;
+    &lt;/global-results&gt;
+&lt;/package&gt;
+&lt;package name=&quot;test&quot; namespace=&quot;/test&quot; extends=&quot;default&quot;&gt;
+    // 此处即可默认使用上面配置的global-results了
+&lt;/package&gt;
+</code></pre><h4 id="10-OGNL表达式"><a href="#10-OGNL表达式" class="headerlink" title="10. OGNL表达式"></a><font color="#F00">10. OGNL表达式</font></h4><p>注：  </p>
+<ol>
+<li>可以用<code>&lt;s:debug&gt;&lt;/s:debug&gt;</code>标签来查看当前页面的栈值信息。  </li>
+<li>只有传递了[对象].[属性]参数，才会构造相应的对象。  </li>
+</ol>
+<p>访问普通方法或属性：直接用[对象].[方法/属性]即可。  </p>
+<p>访问静态方法或属性：用@[类名]@[方法/属性]访问。  </p>
+<p>注：访问Math类的静态方法：用@@[方法]访问。  </p>
+<p>访问普通类的构造方法：new [构造方法]。  </p>
+<p>访问List，Map，Set：直接用变量名访问。  </p>
+<p>访问List中某个元素：[对象][下标]。例如：list[1]。  </p>
+<p>访问Map中某个元素：[对象].[keys]。例如：map.key。  </p>
+<p>访问Set中某个元素：[对象][下标]。例如：set[1]。  </p>
+<p>访问容器的大小：[对象].size()或[对象].size。  </p>
+<p>投影(过滤)：[对象].{?#this.age==1}[下标]。例如：  </p>
+<pre><code>&lt;s:property value=&quot;users.{?#this.age==1}[0]&quot;/&gt;
+&lt;s:property value=&quot;users.{^#this.age&gt;1}.{age}&quot;/&gt;
+&lt;s:property value=&quot;users.{$#this.age&gt;1}.{age}&quot;/&gt;
+</code></pre><p>注：?#表示取符合过滤条件的集合，^#表示取集合的开头,$#表示取集合的结尾</p>
+<p>访问栈中的action：用“[下标]”访问从下标开始，到栈底的action，例如[0]表示栈顶开始，到栈底的action。  </p>
+<p>注：若要访问action中的某个属性，会从[下标]开始检索这个属性，直到检索到栈底。  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Eclipse/eclipse-tomcat-add-and-remove/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Eclipse/eclipse-tomcat-add-and-remove/" itemprop="url">
+                  Maven项目在Eclipse中，Tomcat的Add And Remove找不到项目
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-15T00:00:00+00:00">
+                2016-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Eclipse/" itemprop="url" rel="index">
+                    <span itemprop="name">Eclipse</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1、右键项目-gt-Properties-gt-Project-Facets"><a href="#1、右键项目-gt-Properties-gt-Project-Facets" class="headerlink" title="1、右键项目 -&gt; Properties -&gt; Project Facets"></a>1、右键项目 -&gt; Properties -&gt; Project Facets</h4><p>勾选Dynamic web module，如果无法点击确定，根据提示在勾选要求勾选的项（例如我的项目还要求勾选Java 1.6 or newer）即可。  </p>
+<h4 id="2、右键项目-gt-Properties-gt-Deployment-Assembly"><a href="#2、右键项目-gt-Properties-gt-Deployment-Assembly" class="headerlink" title="2、右键项目 -&gt; Properties -&gt; Deployment Assembly"></a>2、右键项目 -&gt; Properties -&gt; Deployment Assembly</h4><p>修改如下图：  </p>
+<p><img src="/images/eclipse-tomcat-add-and-remove-001.jpg" alt="Deployment Assembly"> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Spring/spring-docs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Spring/spring-docs/" itemprop="url">
+                  怎么下载Spring的官方文档
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-01T00:00:00+00:00">
+                2016-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、在Spring的主页上，点击<strong>DOCS</strong>，会看到<strong>Reference Documentation</strong>。<br>2、点击<strong>Read the Reference Documentation</strong>，会来到<strong>Documentation</strong>的页面。<br>3、随便点开一个，然后点<strong>Reference</strong>。<br>4、这时会打开在线的文档，然后搜索<strong>Distribution Zip Files</strong>。<br>5、这时会找到如下的链接地址，这就可以找到Spring所有文档了。  </p>
+<p><a href="http://repo.spring.io/release/org/springframework/spring" target="_blank" rel="noopener">http://repo.spring.io/release/org/springframework/spring</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Kramdown/kramdown's-quick-reference-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Kramdown/kramdown's-quick-reference-guide/" itemprop="url">
+                  Kramdown使用向导
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-26T00:00:00+00:00">
+                2016-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Kramdown/" itemprop="url" rel="index">
+                    <span itemprop="name">Kramdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://kramdown.gettalong.org/quickref.html" target="_blank" rel="noopener">kramdown’s quick reference guide</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Maven/maven-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Maven/maven-learning/" itemprop="url">
+                  推荐一个学习Maven的博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-19T00:00:00+00:00">
+                2016-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Maven/" itemprop="url" rel="index">
+                    <span itemprop="name">Maven</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.cnblogs.com/xdp-gacl/category/544719.html" target="_blank" rel="noopener">Maven学习总结</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Maven/maven-oschina/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Maven/maven-oschina/" itemprop="url">
+                  开源中国Maven库使用帮助
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-19T00:00:00+00:00">
+                2016-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Maven/" itemprop="url" rel="index">
+                    <span itemprop="name">Maven</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://maven.oschina.net/help.html" target="_blank" rel="noopener">开源中国 Maven 库使用帮助</a></p>
+<p>注：该帮助文档中有如下命令，来生成maven项目：</p>
+<pre><code>mvn archetype:create -DgroupId=oschina -DartifactId=simple -DpackageName=net.oschina.simple -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+</code></pre><p>但在我的电脑上使用上述命令生成maven项目时，报如下错误：</p>
+<pre><code>[ERROR] Failed to execute goal org.apache.maven.plugins:maven-archetype-plugin:2
+.4:create (default-cli) on project standalone-pom: Unable to parse configuration
+ of mojo org.apache.maven.plugins:maven-archetype-plugin:2.4:create for paramete
+r #: Cannot create instance of interface org.apache.maven.artifact.repository.Ar
+tifactRepository: org.apache.maven.artifact.repository.ArtifactRepository.&lt;init&gt;
+() -&gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e swit
+ch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please rea
+d the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginConfigur
+ationException
+</code></pre><p>原因是在maven3.0.5以上版本舍弃了create，使用generate生成项目  </p>
+<p>参考：<a href="http://bbs.csdn.net/topics/391016527" target="_blank" rel="noopener">http://bbs.csdn.net/topics/391016527</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Hibernate/hibernate-auto_increment/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Hibernate/hibernate-auto_increment/" itemprop="url">
+                  Hibernate主键自增注解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-28T00:00:00+00:00">
+                2016-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Hibernate/" itemprop="url" rel="index">
+                    <span itemprop="name">Hibernate</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Python/virtualenv-virtualenvwrapper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Python/virtualenv-virtualenvwrapper/" itemprop="url">
+                  virtualenv和virtualenvwrapper虚拟运行环境的使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-28T00:00:00+00:00">
+                2016-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1、virtualenv"><a href="#1、virtualenv" class="headerlink" title="1、virtualenv"></a>1、virtualenv</h3><p>安装virtualenv</p>
+<pre><code>$ pip install virtualenv
+</code></pre><p>安装完成后，使用帮助命令查看一下。</p>
+<pre><code>$ virtualenv --help 
+</code></pre><p>使用virtualenv建立虚拟运行环境</p>
+<pre><code>$ export VIRTUALENV_USE_DISTRIBUTE=TRUE
+$ mkdir ~/work
+$ cd ~/work
+$ virtualenv env
+</code></pre><p>上述命令执行后，会在work目录下建立一个新的env目录，这就是虚拟环境目录。<br>VIRTUALENV_USE_DISTRIBUTE是向Distribute明示Python运行信息的环境变量。如果在开发过程中，希望所开发的Python应用程序有“不兼容旧版本的Python”或者“兼容最新版本Python”的要求，最好对该环境变量进行设定。为了不在每次登录都输入这样的命令，我们可以在登录的shell配置中加入下面这条语句。</p>
+<pre><code>$ export VIRTUALENV_USE_DISTRIBUTE=TRUE
+</code></pre><p>Distribute会根据这个环境变量是否存在，判断虚拟运行环境的配置有效或无效。因此在不使用Distribute的时候，建议用unset命令取消该环境变量。<br>接下来，激活虚拟运行环境。</p>
+<pre><code>$ source env/bin/activate
+</code></pre><p>当使用了source命令后，虚拟运行环境信息开始生效。我们可以通过查看命令行终端开头是否出现了（env）这样的标志，来判断虚拟运行环境是否彻底被激活。如：</p>
+<pre><code>(env)ubuntu:~/work$ 
+</code></pre><p>检查安装好的包版本信息</p>
+<pre><code>(env) $ pip freeze
+distribute==0.6.24
+wsgiref==0.1.2
+</code></pre><p>可见，我们已经建立了一个安装最少数量包的Python虚拟运行环境。在这样的环境下，我们再一次使用pip install命令安装开发应用程序需要的包或者模块。如此以来，我们就可以很容易地把我在开发Python应用程序是需要安装的包和模块，从而尽可能减少其它不相干包或者模块给应用程序开发带来的位置影响。<br>如果需要推出当前的虚拟运行环境，可以使用下面的命令。</p>
+<pre><code>(env) $ deactivate
+</code></pre><p>当不需要该虚拟环境时（这里就是指名为env的虚拟环境），可以直接使用rm等命令将对应的目录删除。</p>
+<h3 id="2、virtualenvwrapper"><a href="#2、virtualenvwrapper" class="headerlink" title="2、virtualenvwrapper"></a>2、virtualenvwrapper</h3><p>接着我们介绍一种比virtualenv更容易使用的工具——virtualenvwrapper。virtualenv需要每次使用source命令导入虚拟运行环境信息，这一点非常麻烦，另外开发者还有可能忘记虚拟环境目录的建立位置。virtualenvwrapper这一命令行工具就是通过对virtualenv进行二次封装，解决了上述种种问题。  </p>
+<h4 id="安装virtualenvwrapper"><a href="#安装virtualenvwrapper" class="headerlink" title="安装virtualenvwrapper"></a>安装virtualenvwrapper</h4><pre><code>$ pip install virtualenvwrapper
+</code></pre><p>安装完成后，会在下面的位置生成virtualenvwrapper的shell脚本。<br>/usr/local/bin/virtualenvwrapper.sh<br>在使用virtualenvwrapper时，需要配置登录的shell初始化脚本，将virtualenvwrapper.sh的信息读入当前的shell环境。这里一bash为例，通过对用户目录下的.bashrc配置文件进行如下修改即可。</p>
+<pre><code>if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+</code></pre><p>准备工作到此结束。由于.bashrc是在登录时执行的，因此如果登出了虚拟机上客户端操作系统，再一次登录之后，运行下面的命令同样可以使用virtualenvwrapper命令。<br>再次读入.bashrc  </p>
+<pre><code>source ~/.bashrc
+</code></pre><p>我们可以输入命令mkvirtualenv，看一下起是否可用。</p>
+<pre><code>$ mkvirtualenv --help
+</code></pre><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>下面让我们一起看一下该工具的使用。和virtualenv一样，首先需要创建一个虚拟的运行环境。</p>
+<pre><code>$ mkvirtualenv newenv
+</code></pre><p>当输入上面命令后，也就和virtualenv一样，建立了一个虚拟的运行环境，而且一开始就处于激活的状态，但我们没有见到newenv目录。<br>其实virtualenvwrapper对虚拟运行环境做了统一管理，根据上面配置的环境变量WORKON_HOME的路径信息，在其中建立了虚拟运行环境目录。在前面我们将WORKON_HOME设定为$HOME/.virtualenvs，让我们用下面的命令对这一目录进行确认，看一下是否有newenv目录生成。</p>
+<pre><code>$ ls -la $HOME/.virtualenvs
+</code></pre><p>退出虚拟运行环境对命令同样是deactivate，进入虚拟运行环境对命令变为workon。<br>进入虚拟运行环境：</p>
+<pre><code>$ workon newenv
+</code></pre><p>当我们想浏览所有既存对虚拟运行环境却忘记了他们的名称时，可以不加任何选项，蛋蛋输入workon命令即可。虽然该工具包提供了lsvirtualenv这一专门浏览既存虚拟运行环境的命令，但如果仅仅是浏览环境，不如直接使用workon来的方便。<br>通过mkvirtualenv建立的虚拟运行环境可用下面的命令删除。</p>
+<pre><code>$ rmvirtualenv newenv
+</code></pre><p>声明：以上内容整理自《Python开发实战》。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/Eclipse/eclipse-gae/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/cn/技术/Eclipse/eclipse-gae/" itemprop="url">
+                  用Eclipse本地部署GAE的demo时遇到的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-24T00:00:00+00:00">
+                2016-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Eclipse/" itemprop="url" rel="index">
+                    <span itemprop="name">Eclipse</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这两天在尝试使用Google的GAE，参照Google提供的<a href="https://cloud.google.com/appengine/docs" target="_blank" rel="noopener">App Engine Docs</a>搭建本地的开发环境。<br>学到了一些知识，也遇到了一些问题，这里就做一个简单的总结：  </p>
+<h3 id="1、maven"><a href="#1、maven" class="headerlink" title="1、maven"></a>1、maven</h3><p>首先，<a href="http://maven.apache.org" target="_blank" rel="noopener">maven</a>之前也有接触过，为了方便此项目的使用，这里就记录一些命令吧。  </p>
+<pre><code>$ mvn -v --查看当前mvn的版本
+$ mvn appengine:devserver --编译并启动服务
+$ mvn appengine:devserver_start --启服务
+$ mvn appengine:devserver_stop --停服务
+$ mvn appengine:update --将项目上传到Google App Engine
+</code></pre><p>这里需要说明的是，上传项目前，需要修改/src/main/webapp/WEB-INF/appengine-web.xml文件的application（project名）和version（版本）：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;appengine-web-app xmlns=&quot;http://appengine.google.com/ns/1.0&quot;&gt;
+  &lt;application&gt;YOUR-PROJECT-ID&lt;/application&gt;
+  &lt;version&gt;YOUR-VERSION-ID&lt;/version&gt;
+  &lt;threadsafe&gt;true&lt;/threadsafe&gt;
+&lt;/appengine-web-app&gt;
+</code></pre><p>注：version需要符合一定的格式，对应的正则表达式：’^(?:^(?!-)[a-z\d-]{0,62}[a-z\d]$)$’。  </p>
+<h3 id="2、Eclipse部署Tomcat问题"><a href="#2、Eclipse部署Tomcat问题" class="headerlink" title="2、Eclipse部署Tomcat问题"></a>2、Eclipse部署Tomcat问题</h3><h4 id="1-启服务报java-io-FileNotFoundException"><a href="#1-启服务报java-io-FileNotFoundException" class="headerlink" title="1) 启服务报java.io.FileNotFoundException:"></a>1) 启服务报java.io.FileNotFoundException:</h4><pre><code>Could not resolve XML resource [null] with public ID [-//Oracle Corporation//DTD Web Application 2.3//EN], system ID [http://java.sun.com/dtd/web-app_2_3.dtd] and base URI [file:/D:/Program/apache-tomcat-8.0.26/webapps_prpall/appengine-try-java-master/WEB-INF/web.xml] to a known, local entity.
+</code></pre><p>解决办法：<br>a. 在Servers窗口中双击Tomcat，勾选Serve modules without publishing；<br>b. 修改conf/context.xml，如下：  </p>
+<pre><code>&lt;Context xmlBlockExternal=&quot;false&quot;&gt;
+</code></pre><p>参考：<a href="http://dannyzhou.github.io/blogs//2015/10/11/split_web_xml" target="_blank" rel="noopener">http://dannyzhou.github.io/blogs//2015/10/11/split_web_xml</a>  </p>
+<h4 id="2-无法进入调试，并警告"><a href="#2-无法进入调试，并警告" class="headerlink" title="2) 无法进入调试，并警告:"></a>2) 无法进入调试，并警告:</h4><pre><code>[SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property &apos;source&apos; to &apos;org.eclipse.jst.jee.server:appengine-try-java-master&apos; did not find a matching property.
+</code></pre><p>解决办法：<br>在Servers窗口中双击Tomcat，打开的窗口中找到并点击Open launch configuration，在Source中添加该project。  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="百成">
+          <p class="site-author-name" itemprop="name">百成</p>
+           
+              <p class="site-description motion-element" itemprop="description">A journey of a thousand miles must begin with a single step</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zbc0512" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/727750999" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">百成</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

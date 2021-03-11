@@ -1,0 +1,1004 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans,en,default">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="VPN,pptp,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Zhang BaiCheng's Programming Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="一、环境操作系统：CentOS 7.0 64位本地网卡：   # ifconfig eth0: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt;  mtu 1500       inet 10.172.96.8  netmask 255.255.248.0  broadcast 10.172.103.255 eth1: flags=4163&amp;lt;U">
+<meta name="keywords" content="VPN,pptp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS 7.0安装搭建pptp vpn服务">
+<meta property="og:url" content="http://zbc.io/cn/技术/VPN/linux-pptp-vpn/index.html">
+<meta property="og:site_name" content="Zhang BaiCheng&#39;s Programming Blog">
+<meta property="og:description" content="一、环境操作系统：CentOS 7.0 64位本地网卡：   # ifconfig eth0: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt;  mtu 1500       inet 10.172.96.8  netmask 255.255.248.0  broadcast 10.172.103.255 eth1: flags=4163&amp;lt;U">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-11T15:41:21.382Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS 7.0安装搭建pptp vpn服务">
+<meta name="twitter:description" content="一、环境操作系统：CentOS 7.0 64位本地网卡：   # ifconfig eth0: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt;  mtu 1500       inet 10.172.96.8  netmask 255.255.248.0  broadcast 10.172.103.255 eth1: flags=4163&amp;lt;U">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zbc.io/cn/技术/VPN/linux-pptp-vpn/">
+
+
+
+
+
+  <title> CentOS 7.0安装搭建pptp vpn服务 | Zhang BaiCheng's Programming Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?657a2d6ff2f408bb3176a1b2e1f63785";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zhang BaiCheng's Programming Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sharp tools make good work</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zbc.io/cn/技术/VPN/linux-pptp-vpn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="百成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhang BaiCheng's Programming Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CentOS 7.0安装搭建pptp vpn服务
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-01T00:00:00+00:00">
+                2015-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/VPN/" itemprop="url" rel="index">
+                    <span itemprop="name">VPN</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h3><p>操作系统：CentOS 7.0 64位<br>本地网卡：  </p>
+<pre><code># ifconfig
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+      inet 10.172.96.8  netmask 255.255.248.0  broadcast 10.172.103.255
+eth1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+      inet 47.88.1.245  netmask 255.255.252.0  broadcast 47.88.3.255
+</code></pre><p>说明：本地网卡eth0负责连接vpn客户端，eth1负责与10.100.100.0网段服务器的连接。<br>目的：<br>1.vpn客户端能够成功的连接到vpn服务器上；<br>2.vpn服务器可以转发来自vpn客户端对10.100.100.0网段的请求。<br>检查是否支持：  </p>
+<pre><code># modprobe ppp-compress-18 &amp;&amp; echo ok
+</code></pre><p>执行上述命令后，显示“ok”。继续执行如下命令，并提示如下信息，则表明支持。  </p>
+<pre><code># cat /dev/net/tun
+cat: /dev/net/tun: File descriptor in bad state
+</code></pre><p>上述两条均通过，才能安装pptp。否则就只能考虑openvpn。  </p>
+<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><p>1.Cent OS 7.0 默认集成了MPPE和PPP，以及iptables，因此下面检查也可以忽略：  </p>
+<pre><code># rpm -q ppp // 查询当前系统的ppp是否默认集成了，以及ppp的版本
+</code></pre><p>用以下命令检查PPP是否支持MPPE：</p>
+<pre><code># strings &apos;/usr/sbin/pppd&apos; |grep -i mppe | wc --lines
+</code></pre><p>如果以上命令输出为“0”则表示不支持；输出为“30”或更大的数字就表示支持，MPPE（Microsoft Point to Point Encryption，微软点对点加密）。<br>2.安装pptpd</p>
+<pre><code># yum install pptpd
+</code></pre><p>也可以自行下载进行安装：  </p>
+<pre><code># rpm -ivh pptpd-1.4.0-1.el6.x86_64.rpm
+</code></pre><p>64位pptpd-1.4.0-1.el6.x86_64.rpm的下载地址：<a href="http://www.pipipan.com/file/18457333" target="_blank" rel="noopener">http://www.pipipan.com/file/18457333</a><br>32位pptpd-1.4.0-1.el6.i686.rpm版本下载地址：<a href="http://www.400gb.com/file/54124192" target="_blank" rel="noopener">http://www.400gb.com/file/54124192</a>  </p>
+<h3 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h3><p>注：配置相应文件时建议先使用cp命令备份.bak文件。</p>
+<h4 id="1-配置-etc-ppp-options-pptpd"><a href="#1-配置-etc-ppp-options-pptpd" class="headerlink" title="1. 配置/etc/ppp/options.pptpd"></a>1. 配置/etc/ppp/options.pptpd</h4><p>去掉两行ms-dns前面的#，并修改为google的dns  </p>
+<pre><code>ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+</code></pre><h4 id="2-配置-etc-ppp-chap-secrets"><a href="#2-配置-etc-ppp-chap-secrets" class="headerlink" title="2. 配置/etc/ppp/chap-secrets"></a>2. 配置/etc/ppp/chap-secrets</h4><p>用户登录信息：  </p>
+<pre><code>username    pptpd    password    *
+</code></pre><h4 id="3-配置-etc-pptpd-conf"><a href="#3-配置-etc-pptpd-conf" class="headerlink" title="3. 配置/etc/pptpd.conf"></a>3. 配置/etc/pptpd.conf</h4><p>去掉localip和remoteip两行的注释：  </p>
+<pre><code>localip 192.168.0.1
+remoteip 192.168.0.234-238,192.168.0.245
+</code></pre><h4 id="4-配置-etc-sysctl-conf"><a href="#4-配置-etc-sysctl-conf" class="headerlink" title="4. 配置/etc/sysctl.conf"></a>4. 配置/etc/sysctl.conf</h4><p>在末尾添加下面的代码，使内核支持转发：  </p>
+<pre><code>net.ipv4.ip_forward = 1
+</code></pre><p>运行下面的命令使内核修改生效：  </p>
+<pre><code># sysctl -p
+</code></pre><h3 id="四、转发"><a href="#四、转发" class="headerlink" title="四、转发"></a>四、转发</h3><p>添加下面的iptables转发规则  </p>
+<pre><code>iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth1 -j MASQUERADE
+</code></pre><p>注意：由于阿里云是双网卡，内网eth0，外网eth1，所以这块特别容易误写为eth0，这也是为什么很多杂乱的教程无法配置成功的原因之一。  </p>
+<p>添加转发规则后重启就会失效，CentOS 6系统可以使用service iptables save保存配置，但CentOS 7不支持，可能会报错：  </p>
+<pre><code>-bash: /etc/init.d/iptables: No such file or directory
+</code></pre><p>我们需要将配置写入rc.local文件中，开机自动设置，运行下面的命令赋予rc.loacl执行权限：  </p>
+<pre><code>chmod +x /etc/rc.d/rc.local
+</code></pre><p>然后编辑rc.local，并把上面的转发规则写到文件末尾。  </p>
+<h3 id="五、启动"><a href="#五、启动" class="headerlink" title="五、启动"></a>五、启动</h3><h4 id="1-启动pptpd"><a href="#1-启动pptpd" class="headerlink" title="1. 启动pptpd"></a>1. 启动pptpd</h4><pre><code>/etc/init.d/pptpd start
+</code></pre><h4 id="2-用下面的命令使pptpd开机自动启动"><a href="#2-用下面的命令使pptpd开机自动启动" class="headerlink" title="2. 用下面的命令使pptpd开机自动启动"></a>2. 用下面的命令使pptpd开机自动启动</h4><pre><code>chkconfig pptpd on
+</code></pre><p>到此为止，vpn已搭建完成，可以连接并访问外网了。  </p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p>centos6.4安装搭建pptp vpn服务：<a href="http://blog.csdn.net/musiccow/article/details/22655637" target="_blank" rel="noopener">http://blog.csdn.net/musiccow/article/details/22655637</a><br>centos6.4安装配置vpn服务器步骤详解：<a href="http://www.jb51.net/os/RedHat/128137.html" target="_blank" rel="noopener">http://www.jb51.net/os/RedHat/128137.html</a><br>阿里云服务器配置VPN详解，pptpd下载地址更新版：<a href="http://bbs.aliyun.com/read/231812.html" target="_blank" rel="noopener">http://bbs.aliyun.com/read/231812.html</a><br>Centos 7搭建VPN（PPTP）服务器方法：<a href="http://www.wanghailin.cn/centos-7-vpn/" target="_blank" rel="noopener">http://www.wanghailin.cn/centos-7-vpn/</a>  </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VPN/" rel="tag"># VPN</a>
+          
+            <a href="/tags/pptp/" rel="tag"># pptp</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cn/技术/Java/java-dynamic-proxy/" rel="next" title="Java动态代理（JDK和CGlib）">
+                <i class="fa fa-chevron-left"></i> Java动态代理（JDK和CGlib）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cn/技术/Spring/spring-download/" rel="prev" title="Spring下载地址">
+                Spring下载地址 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <span class="jiathis_txt">分享到：</span>
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_twitter"></a>
+  <a class="jiathis_button_fb"></a>
+  <a class="jiathis_button_googleplus"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share?uid=2054299" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+  var jiathis_config={
+    data_track_clickback:true,
+    summary:"",
+    shortUrl:false,
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2054299" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="百成">
+          <p class="site-author-name" itemprop="name">百成</p>
+           
+              <p class="site-description motion-element" itemprop="description">A journey of a thousand miles must begin with a single step</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">60</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zbc0512" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/727750999" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、环境"><span class="nav-number">1.</span> <span class="nav-text">一、环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、安装"><span class="nav-number">2.</span> <span class="nav-text">二、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、配置"><span class="nav-number">3.</span> <span class="nav-text">三、配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-配置-etc-ppp-options-pptpd"><span class="nav-number">3.1.</span> <span class="nav-text">1. 配置/etc/ppp/options.pptpd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-配置-etc-ppp-chap-secrets"><span class="nav-number">3.2.</span> <span class="nav-text">2. 配置/etc/ppp/chap-secrets</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-配置-etc-pptpd-conf"><span class="nav-number">3.3.</span> <span class="nav-text">3. 配置/etc/pptpd.conf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-配置-etc-sysctl-conf"><span class="nav-number">3.4.</span> <span class="nav-text">4. 配置/etc/sysctl.conf</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、转发"><span class="nav-number">4.</span> <span class="nav-text">四、转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、启动"><span class="nav-number">5.</span> <span class="nav-text">五、启动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-启动pptpd"><span class="nav-number">5.1.</span> <span class="nav-text">1. 启动pptpd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-用下面的命令使pptpd开机自动启动"><span class="nav-number">5.2.</span> <span class="nav-text">2. 用下面的命令使pptpd开机自动启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考："><span class="nav-number">6.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">百成</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
